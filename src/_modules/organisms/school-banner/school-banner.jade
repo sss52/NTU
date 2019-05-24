@@ -5,6 +5,12 @@ mixin school-banner(spec)
 	- spec.class = spec.class || ''
 
 	.school-banner(class=spec.class)&attributes(attributes)
+		if spec.bar == true
+			.bar(class=spec.barcolour)
+				span.bar-1
+				span.bar-2
+				span.bar-3
+				span.bar-4
 		.school-banner__image
 			img(src=spec.image alt='banner image')
 		.school-banner__content

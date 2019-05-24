@@ -38,7 +38,85 @@
 	}
 
 	&.banner-news {
+		.bar {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			opacity: 0.65;
+			z-index: 2;
+			overflow: hidden;
+
+			&.yellow {
+				.bar-1, .bar-2, .bar-3, .bar-4 {
+					background: $yellow2;
+				}
+			}
+
+			&.blue {
+				.bar-1, .bar-2, .bar-3, .bar-4 {
+					background: $blue2;
+				}
+			}
+
+			&-1,
+			&-2 {
+				display: block;
+				height: 12px;
+				width: 20%;
+				right: 0;
+				position: absolute;
+			}
+
+			&-1 {
+				right: 35px;
+				top: 65px;
+			}
+
+			&-2 {
+				right: 5px;
+				top: 80px;
+			}
+
+			&-3 {
+				display: block;
+				height: 200px;
+				width: 50%;
+				right: -290px;
+				top: 215px;
+				position: absolute;
+			}
+
+			&-4 {
+				display: block;
+				height: 50px;
+				width: 50%;
+				right: -425px;
+				top: 375px;
+				position: absolute;
+			}
+
+			&-1, &-2, &-3, &-4 {
+				transform: rotate(-60deg);
+			}
+		}
+
 		.school-banner {
+			&__image {
+				// overflow: hidden;
+
+				// &:before {
+				// 	content: '';
+				// 	display: block;
+				// 	position: absolute;
+				// 	background: url('/assets/ntu/images/banner-bar.svg') no-repeat;
+				// 	width: 30%;
+				// 	height: 100%;
+				// 	right: -45px;
+				// }
+			}
+
 			&__content {
 				.news {
 					&-wrap {
