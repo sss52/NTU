@@ -2,6 +2,7 @@ extends ../_layouts/base-school
 
 include ../_modules/organisms/school-banner/school-banner
 include ../_modules/organisms/cta-section/cta-section
+include ../_modules/molecules/article-card/article-card
 
 block config
 	//- Correct base url pathing for this page
@@ -119,3 +120,35 @@ block content
 	section.events
 		.container
 			h2 Events
+			.row
+				.col-md-3
+					+article-card({
+						"image":"/assets/ntu/images/event1.png",
+						"title":"NTU and UPMC-Sorbonne Universities Joint Workshops",
+						"type":"Events",
+						"date":"2 -4 June 2019",
+					})
+
+				.col-md-3
+					+article-card({
+						"image":"/assets/ntu/images/event2.png",
+						"title":"Economic Seminar | Labor market rigidity and employment",
+						"type":"Events",
+						"date":"17 April 2019",
+					})
+
+				.col-md-3
+					+article-card({
+						"image":"/assets/ntu/images/event3.png",
+						"title":"Psychology Seminar | Simple model systems provide insight into mechanisms",
+						"type":"Events",
+						"date":"17 April 2019",
+					})
+
+				.col-md-3
+					+article-card({
+						"image":"/assets/ntu/images/event4.png",
+						"title":"Economics Seminar | Quantile Treatment Effects and Bootstrap Inference",
+						"type":"Events",
+						"date":"5 April 2019",
+					})
