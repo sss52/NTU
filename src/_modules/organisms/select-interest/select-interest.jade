@@ -3,32 +3,32 @@ mixin select-interest(spec)
 	- spec.__class = spec.__class || ''
 
 	section.interest-section
-			.container-section
-				.filter-wrapper
-					span#filter-header
-						//- +button({
-						//- 		'__type': 'button',
-						//- 		'__class': 'btn--search js-search btn--noborder btn--noanime',
-						//- 		'__iconBefore': 'icon-search'
-						//- 	})
-					ul#filter-list.filter-list
+		.container
+			.filter-wrapper
+				span#filter-header
+					//- +button({
+					//- 		'__type': 'button',
+					//- 		'__class': 'btn--search js-search btn--noborder btn--noanime',
+					//- 		'__iconBefore': 'icon-search'
+					//- 	})
+				ul#filter-list.filter-list
+					li.filter-item
 						a(href="#")
-							li.filter-item
-								| Undergraduate Programmes
-								i.icon.icon-arrow-up
+							| Undergraduate Programmes
+							i.icon.icon-arrow-up
+					li.filter-item
 						a(href="#")
-							li.filter-item
-								| Graduate Programmes
-								i.icon.icon-arrow-up
+							| Graduate Programmes
+							i.icon.icon-arrow-up
+					li.filter-item
 						a(href="#")
-							li.filter-item
-								| Global Programmes
-								i.icon.icon-arrow-up
+							| Global Programmes
+							i.icon.icon-arrow-up
+					li.filter-item
 						a(href="#")
-							li.filter-item
-								| Double majors
-								i.icon.icon-arrow-up
+							| Double majors
+							i.icon.icon-arrow-up
+					li.filter-item
 						a(href="#")
-							li.filter-item
-								| Skills future
-								i.icon.icon-arrow-up
+							| Skills future
+							i.icon.icon-arrow-up
