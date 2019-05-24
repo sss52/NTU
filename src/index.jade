@@ -2,119 +2,38 @@ extends _layouts/base
 
 include _modules/organisms/home-carousel/home-carousel
 include _modules/organisms/event-carousel/event-carousel
+include _modules/organisms/select-interest/select-interest
+include _modules/organisms/excellence/excellence
+include _modules/organisms/social-feeds/social-feeds
+include _modules/organisms/research/research
 
 block content
 	+home-carousel()
 
-	.event-section
-			.world-count
-				h3 NTU’s numbers in the world
-				.count-link 
-					a(href="#") See NTU’s excellence
-						i.icon.icon-arrow-right
-				.column
-					i.icon.icon-play3
-					h2.count 3<sup>rd</sup>
-					span.count-text Materials Science
-				.column
-					i.icon.icon-play3
-					h2.count 6<sup>th</sup> 
-					span.count-text Electrical &amp; Electronic Engineering
-				.column
-					i.icon.icon-play3
-					h2.count 8<sup>th</sup>
-					span.count-text Communications  &amp; Media Studies
-				.column
-					i.icon.icon-play3
-					h2.count 9<sup>th</sup>
-					span.count-text Chemistry
+	+select-interest()
 
-	.interest-section
-		.container 
-			.filter-wrapper
-				span#filter-header
-					//- +button({
-					//- 		'__type': 'button',
-					//- 		'__class': 'btn--search js-search btn--noborder btn--noanime',
-					//- 		'__iconBefore': 'icon-search'
-					//- 	})
-				ul#filter-list.filter-list
-					a(href="#")
-						li.filter-item
-							| Undergraduate Programmes
-							i.icon.icon-arrow-up
-					a(href="#")
-						li.filter-item
-							| Graduate Programmes
-							i.icon.icon-arrow-up
-					a(href="#")
-						li.filter-item
-							| Global Programmes
-							i.icon.icon-arrow-up
-					a(href="#")
-						li.filter-item
-							| Double majors
-							i.icon.icon-arrow-up
-					a(href="#")
-						li.filter-item
-							| Skills future
-							i.icon.icon-arrow-up
+	+excellence()
 
-
-	section.research-section
-		.grid-flex
-			//.col.col-image(style='background-image: url(/assets/ntu/images/research-2.png);')
-			img.col.col-image(src='/assets/ntu/images/research-1.png')
-			.col.col-text.col-left
-				.Aligner-item
-					p.heading Singapore President and NTU new  Chancellor ​Halimah Yacob made her first visit to the campus
-					p.desc During a tour of NTU’s latest facilities, including the new residential halls at North Hill and Nanyang Crescent, President Halimah got a close-up look at the university's Residential Education programme, which offers a variety of learning activities hosted by the halls of residence for student residents. 
-					button See research
-						i.icon.icon-arrow-right
-		.grid-flex.inverse-section
-			img.col.col-image(style='top: -50px;position: relative;' src='/assets/ntu/images/research-1.png')
-			.col.col-text
-				.Aligner-item
-					p.heading Agilent Technologies and Nanyang Technological University collaborate on wastewater treatment research.
-					p.desc Scientists and engineers from NEWRI aim to gain a better understanding of microbes capable of degrading various materials so as to harness them for wastewater and waste treatment.
-					button See research
-						i.icon.icon-arrow-right
+	+research()
 
 	+event-carousel()
 
-	
-	.research-section
-		.container 
-			div(style='width: 100%;float: left;')
-				ul.grid(style="width: 50%;float: left;")
-					li.grid_item.span__1.b
-							a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-1.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name User List  
-					li.grid_item.span__1.b
-							a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-2.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name NTU Singapore 
-					li.grid_item.span__1.b
-							a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-3.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name User List 
-					li.grid_item.span__1.c
-							a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/research-2.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name User List 
-				ul.grid(style="width: 50%;height: 100%;float: left;")
-					li.grid_item.span__2.a
-						a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-1.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name User List 
+	+social-feeds()
+
+	.dw
+		.dw-pnl
+			.dw-pnl__cntnt.bd--white.tx--white
+				ul
+					li Configurable
+					li Responsive
+					li Supports clusters
+		.dw-pnl
+			img.dw-pnl__cntnt(src='https://unsplash.it/419/?random')
+		.dw-pnl
+			.dw-pnl__cntnt.tx--white.bd--white
+			p
+				| Phasellus malesuada, urna non auctor viverra, libero ex pellentesque urna, id rhoncus eros lacus tristique risus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+		.dw-pnl
+			img.dw-pnl__cntnt(src='https://unsplash.it/445/?random')
+		.dw-pnl
+			img.dw-pnl__cntnt(src='https://unsplash.it/423/?random')
