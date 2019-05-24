@@ -1,6 +1,7 @@
 extends ../_layouts/base-school
 
 include ../_modules/molecules/featured-card/featured-card
+include ../_modules/molecules/video-box/video-box
 
 
 include ../_modules/organisms/school-banner/school-banner
@@ -28,3 +29,10 @@ block content
         "link":"#"
       })
   +strategy-section()
+  .general-content.general-content__bg-white.general-content__with-purple-box
+    .container
+      +video-box({
+        "image":"/assets/ntu/images/videobox.png",
+        "title":"Regenerating kidneys from stem cells by Asst Prof Xia Yun",
+        "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      })

@@ -1,0 +1,14 @@
+mixin video-box(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .video-box(class=spec.__class)&attributes(attributes)
+    .video-box__image
+      img(src=spec.image)
+    .video-box__content
+      h1.video-box__title=spec.title
+      p.video-box__description=spec.description
+      a.fancybox.play-btn(data-fancybox href="https://www.youtube.com/watch?v=D3vDAaAiyH4")
+        .play-btn__icon
+          span.play-sign
+        span.play-btn__text Play Video
