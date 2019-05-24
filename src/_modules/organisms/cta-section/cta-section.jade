@@ -1,28 +1,45 @@
 mixin cta-section(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
 
-  section.cta-section(class=spec.__class)&attributes(attributes)
-    .container
-      .row
-        .col-md-4
-          +button({
-            '__type': 'anchor',
-            '__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
-            '__link': '/',
-            '__text':'MBBS Programme'
-          })
-        .col-md-4
-          +button({
-            '__type': 'anchor',
-            '__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
-            '__link': '/',
-            '__text':'PhD by Research Programme'
-          })
-        .col-md-4
-          +button({
-            '__type': 'anchor',
-            '__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
-            '__link': '/',
-            '__text':'About NTU-Exeter PhD Programme'
-          })
+	section.cta-section(class=spec.__class)&attributes(attributes)
+		.container
+			.row
+				.col-md-4
+					+button({
+						'__type': 'anchor',
+						'__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
+						'__link': '/',
+						'__text':'MBBS Programme'
+					})
+				.col-md-4
+					+button({
+						'__type': 'anchor',
+						'__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
+						'__link': '/',
+						'__text':'PhD by Research Programme'
+					})
+				.col-md-4
+					+button({
+						'__type': 'anchor',
+						'__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
+						'__link': '/',
+						'__text':'About NTU-Exeter PhD Programme'
+					})
+
+mixin cta-section-opt(spec)
+	- spec = spec || {}
+	- spec.class = spec.class || ''
+
+	section.cta-section(class=spec.class)&attributes(attributes)
+		.container
+			.row
+				each button, index in spec.buttons
+					.col-md-4
+						+button({
+							'__type': 'anchor',
+							'__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme ' + button.btnclass,
+							'__link': button.link,
+							'__text': button.text,
+							'__iconBefore': button.icon
+						})
