@@ -142,8 +142,12 @@
                 padding: 15px 20px 15px 30px;
             }
 
-            &:nth-child(2) {
+            &:not(.slick-active) {
                 border-right: 1px solid $gray1;
+            }
+
+            &:last-child {
+                border-right: 0;
             }
 
             &.slick-active {
