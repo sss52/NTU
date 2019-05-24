@@ -74,12 +74,12 @@
   .footer-bg {
     background-color:#181C62;
     width: 100%;
-    padding-top: 70px;
+    padding-bottom: 60px;
   }
   footer{
     display: block;
-    float: left;
     width: 100%;
+    float: left;
   }
   .footer-custom {
     color: #fff;
@@ -88,8 +88,9 @@
     font-weight: normal;
     font-size: 14px;
     box-sizing: border-box;
-    margin: 0 20px;
-    padding: 15px;
+    
+    // margin: 0 20px;
+    // padding: 15px;
     &:after {
       display: table;
       clear: both;
@@ -107,9 +108,12 @@
   }
   .footer-logo{
       text-align:center;
+      padding: 20px 0px;
       img{
+        display: block;
         width: 148px;
         height: 54px;
+        margin: 0 auto;
       }
   }
   @media only screen and (min-width: 568px) {
@@ -188,11 +192,16 @@
       }
     }
   }
+
   
   .ftr-links-sub li .link:hover {
     text-decoration: underline;
     color: #fff;
     cursor: pointer;
+  }
+
+  .footer-lists {
+    padding-top: 20px;
   }
   
   @media only screen and (min-width: 768px) {
@@ -210,7 +219,7 @@
   @media only screen and (min-width: 768px) {
     .footer-lists {
       width: 100%;
-      border-top: 0.5px solid #FFFFFF;
+      border-top: 0.5px solid rgba(255,255,255,0.5);
       margin-top: 10px;
     }
   }
@@ -218,7 +227,7 @@
   @media only screen and (min-width: 1008px) {
     .footer-lists {
       float: left;
-      border-top: 0.5px solid #FFFFFF;
+      border-top: 0.5px solid rgba(255,255,255,0.5);
       margin-top: 10px;
     }
     .scrollToTop-wrapper{
@@ -248,9 +257,9 @@
   .scrollToTop-wrapper{
     text-align: right;
     margin:0px 10px;
-        :focus{
-            outline: none;
-        }
+    &:focus{
+        outline: none;
+    }
     button{
     background: transparent;
     border: none;
@@ -260,11 +269,11 @@
             outline: none;
         }
     }
-    i{
+    i {
         border: 1px solid white;
         color: white;
         margin-left: 5px;
-        padding: 5px;
+        padding: 15px;
     }
 }
 
