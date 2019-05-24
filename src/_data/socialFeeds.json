@@ -1,0 +1,37 @@
+[
+    {
+        "icon": "icon-instagram",
+        "title": "Scientists and engineers from NEWRI aim to gain a better understanding of microbes capable of...",
+        "username": "NTU Singapore",
+        "avatar": "/assets/ntu/images/social-logo.png",
+        "image":"/assets/ntu/images/social-1.png"
+    },
+    {
+        "icon": "icon-facebook",
+        "title": "",
+        "username": "@ntu_sg",
+        "avatar": "/assets/ntu/images/social-logo.png",
+        "image":"/assets/ntu/images/social-1.png"
+    },
+    {
+        "icon": "icon-tweet",
+        "title": "",
+        "username": "NTU Singapore",
+        "avatar": "/assets/ntu/images/social-logo.png",
+        "image":"/assets/ntu/images/social-2.png"
+    },
+    {
+        "icon": "icon-instagram",
+        "title": "",
+        "username": "@ntu_sg",
+        "avatar": "/assets/ntu/images/social-logo.png",
+        "image":"/assets/ntu/images/social-3.png"
+    },
+    {
+        "icon": "icon-facebook",
+        "title": "",
+        "username": "NTU Singapore",
+        "avatar": "/assets/ntu/images/social-logo.png",
+        "image":"/assets/ntu/images/social-4.png"
+    }
+]

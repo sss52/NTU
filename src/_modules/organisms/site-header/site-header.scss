@@ -1,829 +1,294 @@
 // header styles
 header {
-    &.main-header {
-        // padding: 15px 0px;
-        width: 100%;
-        position: relative;
-        transition: all .4s linear;
-        z-index: 10;
-        background:#F4F4F4;
-
-        &.headroom--not-top {
-            position: fixed;
-            background:#F4F4F4;
-            padding:0px;
-
-            .nav-main__item {
-                @include desktop {
-                    &:after {
-                        bottom: -26px !important;
-                    }
-                }
-            }
-
-            @include desktop {
-                padding: 0px;
-            }
-
-            .header-sticky {
-                @include desktop {
-                    align-items: center !important;
-
-                    .nav-main__features {
-                        .menu {
-                            & > li > a:after {
-                                bottom: -25px !important;
-                            }
-
-                            & > li > .sub-menu {
-                                top: 60px !important;
-                            }
-                        }
-                    }
-                }
-
-                .logo-wrap {
-                    a {
-                        img {                            
-                            @include mobile {
-                                width: 90px !important;
-                            }
-
-                            @include tablet {
-                                width: 90px !important;
-                            }
-
-                            @include desktop {
-                                height: 35px !important;
-                            }
-
-                            @include lgDesktop {
-                                height: 45px !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        .container {
-            
-            @include mobile {
-                padding: 0px;
-            }
-
-            @include tablet {
-                padding: 0px;
-            }
-            
-            .header-sticky {
-                width: 100%;
-                position: relative;
-
-                @include desktop {
-                    display: inline-flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                    transition: all .4s ease-in;
-                }
-
-                .logo-wrap {
-                    line-height: 0;
-                    transition: all .4s ease-in;
-                   
-                    @include mobile {
-                        padding: 20px 20px;
-                        margin: -20px 0px;
-                        position: relative;
-                        z-index: 3;
-                        background: transparent;
-                        transition: all .4s linear;
-                    }
-
-                    @include tablet {
-                        padding: 20px 20px;
-                        margin: -20px 0px;
-                        position: relative;
-                        z-index: 3;
-                        background: transparent;
-                        transition: all .4s linear;
-                    }
-
-                    a {
-                        img {
-                            @include mobile {
-                                width: 100px;
-                            }
-
-                            @include tablet {
-                                width: 100px;
-                            }
-
-                            @include desktop {
-                                height: 45px;
-                                transition: all .4s linear;
-                            }
-
-                            @include lgDesktop {
-                                height: 60px;
-                            }
-                        }
-                    }
-                }
-
-                .mobile-nav {
-                    position: absolute;
-                    top: 50%;
-                    right: 0px;
-                    padding: 0px 20px;
-                    transform: translateY(-50%);
-                    z-index: 3;
-
-                    @include tablet {
-                        display: block !important;
-                    }
-
-                    .hamburger-menu {
-                        position: relative;
-                        width: 30px;
-                        height: 22px;
-                        cursor: pointer;
-
-                        &.active {
-                            .nav-line {
-                                transition: all 0.3s;
-        
-                                &.l1, &.l3 {
-                                    top: 8px;
-                                }
-        
-                                &.l2 {
-                                    display: none;
-                                }
-                            }
-        
-                            &.rotate {
-                                .l1 {
-                                    -ms-transform: rotate(45deg);
-                                    -webkit-transform: rotate(45deg);
-                                    transform: rotate(45deg);
-                                }
-        
-                                .l3 {
-                                    -ms-transform: rotate(-45deg);
-                                    -webkit-transform: rotate(-45deg);
-                                    transform: rotate(-45deg);
-                                }
-                            }
-                        }
-
-                        .nav-line {
-                            width: 30px;
-                            height: 4px;
-                            border-radius: 4px;
-                            background-color: #ffffff;
-                            transition: all .4s linear;
-                            position: absolute;
-                            left: 0;
-
-                            &.l1 {
-                                top: 0;
-                            }
-
-                            &.l2 {
-                                display: block;
-                                top: 8px;
-                            }
-
-                            &.l3 {
-                                top: 16px;
-                            }
-
-                        }
-                    }
-                }
-
-                .navigation {
-                    &.desktop {
-                        transition: all .4s linear;
-
-                        @include mobile {
-                            position: absolute;
-                            width: 100%;
-                            top: -100px;
-                            transform: translateY(-100%);
-                            transition: all .4s linear;
-                            z-index: 1;
-
-                            &.expanded {
-                                transform: translate(0);
-                                top: 50px;
-                            }
-                        }
-
-                        @include tablet {
-                            position: absolute;
-                            width: 100%;
-                            top: -100px;
-                            transform: translateY(-100%);
-                            transition: all .4s linear;
-                            z-index: 1;
-
-                            &.expanded {
-                                transform: translate(0);
-                                top: 50px;
-                            }
-                        }
-
-                        @include desktop {
-                            display: block;
-                            width: 100%;
-                            color: #ffffff;
-                            display: inline-flex;
-                            align-items: center;
-                            justify-content: flex-end;
-                            text-align: right;
-                        }
-
-                        .nav {
-                            @include mobile {
-                                padding: 0px 20px;
-                                background: #F4F4F4;
-                                height: 100vh;
-                            }
-
-                            @include tablet {
-                                padding: 0px 20px;
-                                background: #F4F4F4;
-                                height: 100vh;
-                            }
-
-                            &-main {
-                                &.desktop-nav {
-                                    .nav-main__features {
-                                        .menu {
-                                            margin: 0px;
-                                            padding: 0px;
-                                            list-style-type: none;
-
-                                            @include mobile {
-                                                padding: 0px 0px 40px;
-                                                height: 100%
-                                            }
-
-                                            @include tablet {
-                                                padding: 0px 0px 40px;
-                                                height: 100%
-                                            }
-
-                                            @include desktop {
-                                                width: 100%;
-                                                display: inline-flex;
-                                                justify-content: flex-end;
-                                            }
-
-                                            // .dropdown {
-                                            & > li {
-
-                                                @include mobile {
-                                                    position: relative;
-                                                }
-
-                                                @include tablet {
-                                                    position: relative;
-                                                }
-
-                                                // .nav-main__item {
-                                                & > a {
-                                                    display: block;
-                                                    padding: 20px 0px;
-                                                    font-family: $secondaryfont;
-                                                    font-size: calc-em(20, $base);
-                                                    font-weight: $medium;
-                                                    letter-spacing: 1px;
-                                                    color: #000;
-                                                    border-bottom: 1px solid gray;
-                                                    position: relative;
-                                                    &:hover {
-                                                        color: #181C62;
-                                                    }
-
-                                                    @include desktop {
-                                                        padding: 0px;
-                                                        margin: 0px 30px 0px 0px;
-                                                        font-size: calc-em(14, $base);
-                                                        border-bottom: none;
-                                                    }
-                                                }
-
-                                                .btn--nav {
-                                                    position: absolute;
-                                                    width: 50px;
-                                                    height: 40px;
-                                                    top: 14px;
-                                                    right: 0px;
-                                                    border: none;
-                                                    color: #ffffff;
-                                                    font-size: calc-em(10, $base);
-                                                    padding: 10px;
-
-                                                    &:hover,
-                                                    &:focus {
-                                                        color: #181C62;
-                                                        background: transparent;
-                                                        outline: none;
-                                                    }
-
-                                                    @include tablet {
-                                                        display: block !important;
-                                                    }
-                                                }
-
-                                                @include mobile {
-                                                    // .menu-col__lvl2 {
-                                                    & > .sub-menu {
-                                                        display: none;
-                                                        margin: 0;
-                                                        padding: 0px;
-                                                        list-style-type: none;
-                                                        border-bottom: 1px solid gray;
-                                                        background: #000000;
-
-                                                        & > li {
-                                                            padding: 10px 0px;
-                                                            border-bottom: 1px solid gray;
-                                                            position: relative;
-                                                            
-                                                            &:last-child {
-                                                                border-bottom: none;
-                                                            }                                                            
-
-                                                            // .nav-sub__item {
-                                                            & > a {
-                                                                color: #ffffff;
-                                                                padding: 10px 0px;
-                                                                display: block;
-                                                            }
-
-                                                            // .menu-col__lvl3 {
-                                                            & > .sub-menu {
-                                                                display: none;
-                                                                margin: 0;
-                                                                padding: 0;
-                                                                list-style-type: none;
-
-                                                                li {
-                                                                    transition: all .2s ease-in;
-
-                                                                    // .nav-subchild_item {
-                                                                    & > a {
-                                                                        display: block;
-                                                                        padding: 10px 25px;
-                                                                        color: #ffffff;
-                                                                    }
-
-                                                                    &:hover {
-                                                                        background: gray;
-                                                                        // border-bottom: 1px solid gray;
-
-                                                                        // .nav-subchild_item {
-                                                                        & > a {
-                                                                            color: #ffffff;
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-
-                                                @include tablet {
-                                                    // .menu-col__lvl2 {
-                                                    & > .sub-menu {
-                                                        display: none;
-                                                        margin: 0;
-                                                        padding: 0px;
-                                                        list-style-type: none;
-                                                        border-bottom: 1px solid gray;
-                                                        background: #000000;
-
-                                                        & > li {
-                                                            padding: 10px 0px;
-                                                            border-bottom: 1px solid gray;
-                                                            position: relative;
-                                                            
-                                                            &:last-child {
-                                                                border-bottom: none;
-                                                            }                                                            
-
-                                                            // .nav-sub__item {
-                                                            & > a {
-                                                                color: #ffffff;
-                                                                padding: 10px 0px;
-                                                                display: block;
-                                                            }
-
-                                                            // .menu-col__lvl3 {
-                                                            & > .sub-menu {
-                                                                display: none;
-                                                                margin: 0;
-                                                                padding: 0;
-                                                                list-style-type: none;
-
-                                                                li {
-                                                                    transition: all .2s ease-in;
-
-                                                                    // .nav-subchild_item {
-                                                                    & > a {
-                                                                        display: block;
-                                                                        padding: 10px 25px;
-                                                                        color: #ffffff;
-                                                                    }
-
-                                                                    &:hover {
-                                                                        background: gray;
-                                                                        // border-bottom: 1px solid gray;
-
-                                                                        // .nav-subchild_item {
-                                                                        & > a {
-                                                                            color: #ffffff;
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-
-                                                @include desktop {
-                                                    // .menu-col__lvl2 {
-                                                    & > .sub-menu {
-                                                        display: none;
-                                                        position: absolute;
-                                                        top: 87px;
-                                                        background: #ffffff;
-                                                        padding: 0;
-                                                        margin: 0;
-                                                        list-style-type: none;
-                                                        text-align: left;
-                                                        box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.2);
-
-                                                        & > li {
-                                                            padding: 0px;
-                                                            border-bottom: 1px solid #ffffff;
-                                                            transition: all .2s ease-in;
-
-                                                            // .nav-sub__item {
-                                                            & > a {
-                                                                display: block;
-                                                                padding: 10px 25px;
-                                                                font-family: $primaryfont;
-                                                                font-weight: $semi-bold;
-                                                                font-size: calc-em(14, $base);
-                                                                color: gray;
-                                                                text-transform: none;
-                                                                letter-spacing: 0px;
-                                                                transition: all .2s ease-in;
-                                                            }
-
-                                                            &:hover {
-                                                                background: gray;
-                                                                // border-bottom: 1px solid gray;
-
-                                                                // .nav-sub__item {
-                                                                 & > a {
-                                                                    color: #ffffff;
-                                                                }
-                                                            }
-
-                                                            // .menu-col__lvl3 {
-                                                            & > .sub-menu {
-                                                                display: none;
-                                                                position: relative;
-                                                                top: 0px !important;
-                                                                box-shadow: none;
-                                                                background: #ffffff;
-                                                                margin: 0;
-                                                                padding: 0;
-                                                                list-style-type: none;
-
-                                                                li {
-                                                                    border-bottom: 1px solid #cccccc;
-                                                                    transition: all .2s ease-in;
-
-                                                                    // .nav-subchild_item {
-                                                                    & > a {
-                                                                        display: block;
-                                                                        padding: 10px 25px;
-                                                                        font-family: $primaryfont;
-                                                                        font-weight: $semi-bold;
-                                                                        font-size: calc-em(13, $base);
-                                                                        color: gray;
-                                                                        text-transform: none;
-                                                                        letter-spacing: 0px;
-                                                                        transition: all .2s ease-in;
-                                                                    }
-
-                                                                    &:hover {
-                                                                        background: gray;
-                                                                        // border-bottom: 1px solid gray;
-
-                                                                        // .nav-subchild_item {
-                                                                        & > a {
-                                                                            color: #ffffff;
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }   
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .api {
-                            position: absolute;
-                            
-                            @include mobile {
-                                width: 100%;
-                                top: 15px;
-                                right: 0;
-                                z-index: 3;
-                                padding: 20px 20px;
-                                background: #000000;
-                            }
-
-                            @include tablet {
-                                width: 100%;    
-                                top: 40px;
-                                right: 0;
-                                z-index: 3;
-                                padding: 0px 20px;
-                            }
-        
-                            @include desktop {
-                                position: relative;
-                            }
-        
-                            &-search {
-                                &__wrap {
-                                    position: relative;
-        
-                                    @include desktop {
-                                        margin-left: 20px;
-                                    }
-        
-                                    .input-text {
-                                        padding: 10px 40px 10px 15px;
-                                        font-size: calc-em(13, $base);
-                                        line-height: 1;
-                                        border-radius: 25px;
-                                        border: 1px solid #ADADAD;
-                                        display: block;
-
-                                        @include mobile {
-                                            width: 100%;
-                                        }
-
-                                        @include tablet {
-                                            width: 100%;
-                                        }
-        
-                                        @include desktop {
-                                            padding: 8px 40px 8px 15px;
-                                            display: block;
-                                        }
-        
-                                        &:focus {
-                                            outline: none;
-                                        }
-                                    }
-        
-                                    .btn--search {
-                                        border: none;
-                                        color: #000;
-                                        padding: 0px;
-                                        position: absolute;
-                                        font-size: calc-em(9, $base);
-                                        line-height: 1;
-                                        top: 10px;
-                                        right: 15px;
-        
-                                        .btn__text {
-                                            display: none;
-                                        }
-        
-                                        &:hover {
-                                            background: transparent;
-                                        }
-        
-                                        @include desktop {
-                                            top: 0px;
-                                            right: 5px;
-                                            padding: 10px 10px;
-                                            font-size: calc-em(7, $base);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .top-bar {
-        display: flex;
-        height: 44px;
-        padding: 5px 35px;
-
-        span {
-            margin: 0;
-        }
-
-        .topbar {
-            &-wrap {
-                display: flex;
-                width: 50%;
-                align-items: center;
-
-                &:nth-child(2) {
-                    justify-content: flex-end;
-                }
-            }
-            
-            &-link,
-            &-api {
-                ul {
-                    display: flex;
-                    list-style-type: none;
-
-                    li {
-                        margin: 0px 1em;
-                        color: $white;
-
-                        a {
-                            color: $white;
-                            text-decoration: none;
-                        }
-                    }
-                }
-                .icon{
-                    font-size:1.4em;
-                }
-            }
-            &-select{
-                BACKGROUND: transparent;
-                border: none;
-                color: #fff;
-               }
-        }
-    }
-
-    &.is-home {
-        position: fixed;
-    }
+	&.main-header {
+		// padding: 15px 0px;
+		width: 100%;
+		position: relative;
+		transition: all .4s linear;
+		z-index: 10;
+		background:#F4F4F4;
+
+		&.headroom--not-top {
+			position: fixed;
+			background:#F4F4F4;
+			padding:0px;
+
+			.nav-main__item {
+				@include desktop {
+					&:after {
+						bottom: -26px !important;
+					}
+				}
+			}
+
+			@include desktop {
+				padding: 0px;
+			}
+
+			.header-sticky {
+				@include desktop {
+					align-items: center !important;
+
+					.nav-main__features {
+						.menu {
+							& > li > a:after {
+								bottom: -25px !important;
+							}
+
+							& > li > .sub-menu {
+								top: 60px !important;
+							}
+						}
+					}
+				}
+
+				.logo-wrap {
+					a {
+						img {
+							@include mobile {
+								width: 90px !important;
+							}
+
+							@include tablet {
+								width: 90px !important;
+							}
+
+							@include desktop {
+								height: 35px !important;
+							}
+
+							@include lgDesktop {
+								height: 45px !important;
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+	}
+	.main-header {
+		.nav-menu{
+			ul {
+				li {
+					a::after {
+						background-color: #181C62;
+					}
+				}
+
+			}
+
+} }
+	.top-bar {
+		display: flex;
+		height: 44px;
+		padding: 5px 35px;
+
+		span {
+			margin: 0;
+		}
+
+		.topbar {
+			&-wrap {
+				display: flex;
+				width: 50%;
+				align-items: center;
+
+				&:nth-child(2) {
+					justify-content: flex-end;
+				}
+			}
+
+			&-link,
+			&-api {
+				ul {
+					display: flex;
+					list-style-type: none;
+
+					li {
+						margin: 0px 1em;
+						color: $white;
+
+						a {
+							color: $white;
+							text-decoration: none;
+						}
+					}
+				}
+				.icon{
+					font-size:1.4em;
+				}
+			}
+			&-select{
+				BACKGROUND: transparent;
+				border: none;
+				color: #fff;
+			   }
+		}
+	}
+
+	&.is-home {
+		position: fixed;
+	}
 }
 
 .hidden {
-    display: none;
+	display: none;
   }
 
   .block_el{
-    width: 100%;
-    float: left;
+	width: 100%;
+	float: left;
   }
   .main-container{
-    box-sizing: border-box;
-    margin: 0 20px;
-    padding: 15px;
+	box-sizing: border-box;
+	margin: 0 20px;
+	padding: 15px;
   }
   .top-bar {
-    background: #181C62;
-    color: #fff;
-    padding: 5px 25px;
-    font-size: 12px;
-    span{
-        margin-right: 35px;
-    }
+	background: #181C62;
+	color: #fff;
+	padding: 5px 25px;
+	font-size: 12px;
+	span{
+		margin-right: 35px;
+	}
   }
 
   .nav-menu {
-    border-top: solid 1px #1e1e24;
-    border-bottom: solid 1px #1e1e24;
-    background: #F4F4F4;
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-    padding: 10px 0;
-    ul {
-      font-size: 0;
-      width: 100%;
-      text-align: center;
-      li {
-        display: inline-block;
-        list-style: none;
-        margin:0 20px;
-        a {
-          font-size: 13px;
-          text-decoration: none;
-          display: block;
-          padding: 15px 10px;
-          color: #000;
-        }
-        &:hover a, &.active a {
-          color: #000;
-        }
-      }
-    }
+	border-top: solid 1px #1e1e24;
+	border-bottom: solid 1px #1e1e24;
+	background: #F4F4F4;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	align-content: stretch;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 16px;
+	padding: 10px 0;
+	a {
+		padding: 15px 20px;
+		color: white;
+		position: relative;
+		overflow: hidden;
+		display: block;
+
+		&::after {
+		  content: '';
+		  display: block;
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  transform: translateX(-110%);
+		  width: 100%;
+		  height: 3px;
+		  background-color: white;
+		  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+	}
+
+	ul {
+	  font-size: 0;
+	  width: 100%;
+	  text-align: center;
+	  li {
+		display: inline-block;
+		list-style: none;
+		margin:0 20px;
+		a {
+		  font-size: 13px;
+		  text-decoration: none;
+		  display: block;
+		  padding: 15px 10px;
+		  color: #000;
+		}
+		&::after {
+			background-color: #181C62;
+		  }
+		&:hover a, &.active a {
+		  color: #000;
+		}
+	  }
+	}
   }
-  
+
   .nav-bar {
-    margin-top: -1px;
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    .icon-phone{
-        position: absolute;
-            left: 70px;
-            top: 70px;
-            font-size: 24px;
-            
-        }
-        
+	margin-top: -1px;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	align-content: stretch;
+	.icon-phone{
+		position: absolute;
+			left: 70px;
+			top: 70px;
+			font-size: 24px;
+
+		}
+
   }
-  
+
   .left-align {
-    span{
-        position: absolute;
-        width: 76px;
-        height: 14px;
-        left: 100px;
-        top: 65px;
-        font-family: Lato;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 11px;
-        line-height: 13px;
-        &.phone-number{
-            top: 80px;
-            font-size: 16px;
-    float: left;
-    width: 100%;
-        }
-    }
+	span{
+		position: absolute;
+		width: 76px;
+		height: 14px;
+		left: 100px;
+		top: 65px;
+		font-family: Lato;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 11px;
+		line-height: 13px;
+		&.phone-number{
+			top: 80px;
+			font-size: 16px;
+	float: left;
+	width: 100%;
+		}
+	}
   }
-  
+
   .search {
-    display: inline-block;
-    vertical-align: top;
-    input{
-      margin: 5px;
-      padding: 5px;
-      outline: none;
-      background: #F4F4F4;
-      border: 1px solid #ADADAD;
-      border-radius: 36px;
-      width: 246px;
-      height: 33px;
-      top: 49px;
-      position: absolute;
-      padding-left: 10px;
-    }
+	display: inline-block;
+	vertical-align: top;
+	input{
+	  margin: 5px;
+	  padding: 5px;
+	  outline: none;
+	  background: #F4F4F4;
+	  border: 1px solid #ADADAD;
+	  border-radius: 36px;
+	  width: 246px;
+	  height: 33px;
+	  top: 49px;
+	  position: absolute;
+	  padding-left: 10px;
+	}
   }
-  
+
   .logo {
-    vertical-align: top;
-    display: inline-block;
-    font-size: 15px;
-    padding: 10px 0;
-    img{
-        width: 148px;
-        height: 54px;
-    }
-    span {
-      &:first-of-type {
-        font-size: 20px;
-        color: #fff;
-      }
-      display: block;
-    }
+	vertical-align: top;
+	display: inline-block;
+	font-size: 15px;
+	padding: 10px 0;
+	img{
+		width: 148px;
+		height: 54px;
+	}
+	span {
+	  &:first-of-type {
+		font-size: 20px;
+		color: #fff;
+	  }
+	  display: block;
+	}
   }
 
 
-header.headroom--not-top + #main {
-    padding-top: 191px;
-}
