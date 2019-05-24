@@ -19,6 +19,9 @@ $fancybox-image-url: '../images/';
 @import '../_modules/atoms/button/button';
 @import '../_modules/atoms/input-text/input-text';
 @import '../_modules/molecules/sidebar/sidebar';
+@import '../_modules/molecules/featured-card/featured-card';
+
+
 @import '../_modules/organisms/site-header/site-header';
 
 @import '../_modules/organisms/footer/footer';
@@ -171,7 +174,7 @@ body {
         }
 
         p {
-            font-size: calc-em(14, $base);
+            font-size: calc-em(16, $base);
             line-height: 2.0;
             margin: 1.5em 0;
         }
@@ -309,4 +312,9 @@ body {
     background: #fff8e2;
     color: #000;
     padding: 0.5em 0;
+}
+
+
+.general-content {
+    padding: 30px 0px;
 }
