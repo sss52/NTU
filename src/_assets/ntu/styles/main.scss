@@ -15,30 +15,6 @@ $fancybox-image-url: '../images/';
 @import '../assets/ntu/icons/variables';
 @import '../assets/ntu/icons/style.scss';
 
-// Import Modules
-@import '../_modules/atoms/button/button';
-@import '../_modules/atoms/input-text/input-text';
-@import '../_modules/molecules/sidebar/sidebar';
-@import '../_modules/molecules/featured-card/featured-card';
-
-
-@import '../_modules/organisms/site-header/site-header';
-
-@import '../_modules/organisms/footer/footer';
-@import '../_modules/organisms/home-carousel/home-carousel';
-@import '../_modules/organisms/event-carousel/event-carousel';
-@import '../_modules/organisms/select-interest/select-interest';
-@import '../_modules/organisms/excellence/excellence';
-@import '../_modules/organisms/header-college/header-college';
-@import '../_modules/organisms/excellence/excellence';
-@import '../_modules/organisms/research/research';
-@import '../_modules/organisms/social-feeds/social-feeds';
-
-
-//school specific modules
-@import '../_modules/organisms/school-header/school-header';
-@import '../_modules/organisms/school-banner/school-banner';
-@import '../_modules/organisms/cta-section/cta-section';
 
 *,
 *:before,
@@ -318,3 +294,33 @@ body {
 .general-content {
     padding: 30px 0px;
 }
+
+
+
+
+
+// Import Modules
+@import '../_modules/atoms/button/button';
+@import '../_modules/atoms/input-text/input-text';
+@import '../_modules/molecules/sidebar/sidebar';
+@import '../_modules/molecules/featured-card/featured-card';
+
+
+@import '../_modules/organisms/site-header/site-header';
+
+@import '../_modules/organisms/footer/footer';
+@import '../_modules/organisms/home-carousel/home-carousel';
+@import '../_modules/organisms/event-carousel/event-carousel';
+@import '../_modules/organisms/select-interest/select-interest';
+@import '../_modules/organisms/excellence/excellence';
+@import '../_modules/organisms/header-college/header-college';
+@import '../_modules/organisms/excellence/excellence';
+@import '../_modules/organisms/research/research';
+@import '../_modules/organisms/social-feeds/social-feeds';
+
+
+//school specific modules
+@import '../_modules/organisms/school-header/school-header';
+@import '../_modules/organisms/school-banner/school-banner';
+@import '../_modules/organisms/cta-section/cta-section';
+
