@@ -26,12 +26,5 @@
         "username": "@ntu_sg",
         "avatar": "/assets/ntu/images/social-logo.png",
         "image":"/assets/ntu/images/social-3.png"
-    },
-    {
-        "icon": "icon-facebook",
-        "title": "",
-        "username": "NTU Singapore",
-        "avatar": "/assets/ntu/images/social-logo.png",
-        "image":"/assets/ntu/images/social-4.png"
     }
 ]

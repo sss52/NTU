@@ -3,7 +3,8 @@ mixin event-carousel(spec)
 	- spec.__class = spec.__class || ''
 
 	section.event-carousel
-			h3 Our milestones
+			.container
+				h3 Our milestones
 			.event-slider
 				each item in site.data.eventCarousel
 					.event-slide
