@@ -2,5 +2,26 @@ mixin school-header(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
 
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the school-header module
+  header.school-header(class=spec.__class)&attributes(attributes)
+    nav.secondary-nav.main-nav
+      .container
+        .row
+          .main-nav__logo
+            img(src="/assets/ntu/images/ntu-logo-white.svg", alt="ntu logo")
+          .main-nav__links
+            ul
+              each item in site.data.schoolNav.secondary
+                li
+                  a(href=item.link)
+                    span=item.name
+    nav.primary-nav.main-nav
+      .container  
+        .row
+          .main-nav__logo
+            img(src="/assets/ntu/images/LKC Logo.svg", alt="LKC logo")
+          .main-nav__links
+            ul
+              each item in site.data.schoolNav.primary 
+                li
+                  a(href=item.link)
+                    span=item.name

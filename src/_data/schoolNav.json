@@ -1,0 +1,85 @@
+{
+  "primary":[
+    {
+      "name":"About LKCMedicine",
+      "link":"#"
+    },
+    {
+      "name":"Admissions",
+      "link":"#"
+    },
+    {
+      "name":"Programmes",
+      "link":"#"
+    },
+    {
+      "name":"News & Events",
+      "link":"#"
+    },
+    {
+      "name":"Contact Us",
+      "link":"#"
+    }
+  ],
+  "secondary":[
+    {
+      "name":"Information for..",
+      "link":"#",
+      "lvl2nav":[
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        },
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        },
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        }
+      ]
+    },
+    {
+      "name":"Logins",
+      "link":"#",
+      "lvl2nav":[
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        },
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        },
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        }
+      ]
+    },
+    {
+      "name":"Media",
+      "link":"#"
+    },
+    {
+      "name":"Social Media",
+      "link":"#",
+      "lvl2nav":[
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        },
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        },
+        {
+          "name":"lvl2 item",
+          "link":"#"
+        }
+      ]
+    }
+
+  ]
+}
