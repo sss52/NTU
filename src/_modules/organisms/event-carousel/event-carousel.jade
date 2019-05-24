@@ -1,0 +1,14 @@
+mixin event-carousel(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.event-carousel
+			h3 Our milestones
+			.event-slider
+				each item in site.data.eventCarousel
+					.event-slide
+						.image-container
+							img(src=item.image)
+						.text-container
+							h5.title= item.title
+						p.date= item.date

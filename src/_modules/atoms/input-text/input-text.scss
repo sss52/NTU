@@ -1,0 +1,8 @@
+// input-text styles
+input {
+    &.input-text {
+        font-family: $primaryfont;
+        font-size: calc-em(14, $base);
+        padding: 8px;
+    }
+}

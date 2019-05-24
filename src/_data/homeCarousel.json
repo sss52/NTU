@@ -1,0 +1,26 @@
+[
+    {
+        "ftitle": "NTU ranks 12th in the world, cementing position among top universities in QS rankings",
+        "link": "javascript:void(0);",
+        "btnTxt": "See Research",
+        "category": "NEWS",
+        "number" : 1,
+        "image": "https://cdn.pixabay.com/photo/2014/12/17/21/30/wild-flowers-571940__340.jpg"
+    },
+    {
+        "title": "NTU and NUS launch Singapore’s first PhD exchange programme",
+        "link": "javascript:void(0);",
+        "btnTxt": "See Research",
+        "number" : 2,
+        "category": "EDUCATION",
+        "image": "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    },
+    {
+        "title": "New handheld device for quick monitoring of heavy metals in drinking water",
+        "link": "javascript:void(0);",
+        "category": "RESEARCH",
+        "number" : 3,
+        "btnTxt": "See more Research",
+        "image": "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg"
+    }
+]

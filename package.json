@@ -1,0 +1,129 @@
+{
+  "name": "ntu",
+  "version": "0.0.1",
+  "dependencies": {
+    "dot": "^1.1.2",
+    "enquire.js": "^2.1.6",
+    "fancybox": "^3.0.0",
+    "gsap": "^1.19.1",
+    "headroom.js": "^0.9.4",
+    "jquery": "~3.1.1",
+    "jquery-asPieProgress": "^0.4.7",
+    "jquery-match-height": "^0.7.2",
+    "jquery-nice-select": "^1.1.0",
+    "jquery-slimscroll": "^1.3.8",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "masonry-layout": "^4.2.2",
+    "moment": "^2.21.0",
+    "normalize.css": "~5.0.0",
+    "object-fit-images": "^3.2.3",
+    "pikaday": "^1.7.0",
+    "progressbar.js": "^1.0.1",
+    "slick-carousel": "^1.8.1",
+    "sticky-kit": "^1.1.3",
+    "tabs": "^0.2.0",
+    "tiny-emitter": "^2.0.2",
+    "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "~6.7.5",
+    "babel-core": "~6.23.1",
+    "babel-eslint": "~7.1.1",
+    "babel-plugin-add-module-exports": "~0.2.1",
+    "babel-preset-es2015": "~6.22.0",
+    "babelify": "~7.3.0",
+    "browser-sync": "^2.26.3",
+    "browserify": "~14.1.0",
+    "browserify-global-shim": "^1.0.3",
+    "browserify-shim": "^3.8.14",
+    "del": "~2.2.2",
+    "envify": "~4.0.0",
+    "foldero": "~0.1.1",
+    "glob": "~7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-changed": "~2.0.0",
+    "gulp-cssnano": "~2.1.2",
+    "gulp-data": "~1.2.1",
+    "gulp-eslint": "~3.0.1",
+    "gulp-htmlmin": "~3.0.0",
+    "gulp-if": "~2.0.2",
+    "gulp-imagemin": "~3.1.1",
+    "gulp-jade": "~1.1.0",
+    "gulp-load-plugins": "~1.5.0",
+    "gulp-notify": "~3.0.0",
+    "gulp-plumber": "~1.1.0",
+    "gulp-postcss": "~6.3.0",
+    "gulp-rename": "~1.2.2",
+    "gulp-sass": "~3.1.0",
+    "gulp-sourcemaps": "~2.4.1",
+    "gulp-uglify": "~2.0.1",
+    "gulp-util": "~3.0.8",
+    "imagemin-pngquant": "~5.0.0",
+    "imagemin-svgo": "~5.2.0",
+    "jade": "~1.11.0",
+    "js-yaml": "~3.8.1",
+    "lodash": "~4.17.4",
+    "minimist": "~1.2.0",
+    "postcss-object-fit-images": "^1.1.2",
+    "rimraf": "~2.6.1",
+    "vinyl-buffer": "~1.0.0",
+    "vinyl-source-stream": "~1.1.0",
+    "watchify": "~3.9.0 "
+  },
+  "browserify": {
+    "transform": [
+      "browserify-global-shim"
+    ]
+  },
+  "browser": {
+    "fancybox": "./node_modules/fancybox/dist/js/jquery.fancybox.js",
+    "jquery-asPieProgress": "./node_modules/jquery-asPieProgress/dist/jquery-asPieProgress.js",
+    "slick-carousel": "./node_modules/slick-carousel/slick/slick.js",
+    "waypoints": "./node_modules/waypoints/lib/jquery.waypoints.js",
+    "sticky-kit": "./node_modules/sticky-kit/dist/sticky-kit.js",
+    "hover-intent": "./node_modules/jquery-hoverIntent-master/jquery.hoverIntent.js",
+    "jquery-match-height": "./node_modules/jquery-match-height/dist/jquery.matchHeight.js",
+    "jquery-nice-select": "./node_modules/jquery-nice-select/js/jquery.nice-select.js",
+    "malihu-custom-scrollbar-plugin": "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js",
+    "masonry-layout": "./node_modules/masonry-layout/masonry.js"
+  },
+  "browserify-shim": {
+    "fancybox": {
+      "exports": null,
+      "depends": "jquery:jQuery"
+    }
+  },
+  "browserify-global-shim": {
+    "jquery": "$",
+    "jQuery": "$"
+  },
+  "scripts": {
+    "clean-deps": "rimraf node_modules"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "//": "CUSTOM CONFIGURATION",
+  "config": {
+    "//": "Local Server Settings",
+    "host": "127.0.0.1",
+    "port": "3008",
+    "baseUrl": "./",
+    "directories": {
+      "source": "src",
+      "destination": "build",
+      "temporary": "tmp",
+      "//": "Directories relative to `source` directory",
+      "modules": "_modules",
+      "layouts": "_layouts",
+      "images": "_assets/ntu/images",
+      "styles": "_assets/ntu/styles",
+      "scripts": "_assets/ntu/scripts",
+      "data": "_data"
+    },
+    "entries": {
+      "js": "main**.js",
+      "css": "main**.{sass,scss}"
+    }
+  }
+}

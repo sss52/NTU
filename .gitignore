@@ -1,0 +1,7 @@
+node_modules/*
+!node_modules/jquery-hoverIntent-master
+*.log
+build
+tmp
+.grunt
+.DS_Store

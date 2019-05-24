@@ -1,0 +1,46 @@
+mixin sidebar(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__title = spec.__title || ''
+
+	// if there is no sidebar, remove the whole aside
+	aside.sidebar(class=spec.__class)&attributes(attributes)
+		h3.sidebar-title.desktop-only=spec.__title
+		.sidebar-sticky
+			//- ul.sidebar__list
+			//- 	each item in site.data.primaryNav
+			//- 		if item.primary
+			//- 			each itemPri in item.primary
+			//- 				if itemPri.submenu
+			//- 					each childItem, index in itemPri.submenu
+			//- 						if childItem.sub && index == 0
+			//- 							each childSub, index in childItem.sub
+			//- 								li.sidebar__item(class=(index==0 ? "is-active" : ""))
+			//- 									a.sidebar__link.is-active(href=childSub.link)
+			//- 										span= childSub.name
+			ul.sidebar__list
+				li.sidebar__item.is-active
+					a.sidebar__link.is-active(href="http://www.google.com.sg")
+						span *SCAPE The Ground Theatre
+					ul.sidebar__list-lvl3
+						li.sidebar__item.is-active
+							a.sidebar__link.is-active(href="http://www.google.com.ph")
+								span *SCAPE Invasion Festival
+						li.sidebar__item
+							a.sidebar__link(href="http://www.google.com.au")
+								span *SCAPE Invasion Tour
+				li.sidebar__item
+					a.sidebar__link(href="http://www.google.com.us")
+						span *SCAPE Playspace
+				li.sidebar__item
+					a.sidebar__link(href="http://www.google.com.kr")
+						span *SCAPE The Treetop
+				li.sidebar__item
+					a.sidebar__link(href="http://www.google.com.in")
+						span *SCAPE Gallery
+				li.sidebar__item
+					a.sidebar__link(href="http://www.google.com.nz")
+						span *SCAPEmedia hub
+				li.sidebar__item
+					a.sidebar__link(href="http://www.google.com.mx")
+						span *SCAPE Sky Terrace

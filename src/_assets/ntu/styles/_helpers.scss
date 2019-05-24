@@ -1,0 +1,59 @@
+%clearfix {
+	@include clearfix;
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+%list-unstyled {
+	@include normalise-list;
+}
+
+.list-unstyled {
+	@extend %list-unstyled;
+}
+
+%background-cover {
+	@include background-cover;
+}
+
+%visuallyhidden {
+  @include visuallyhidden;
+}
+
+.visuallyhidden {
+	@extend %visuallyhidden;
+}
+
+.vh {
+	@extend %visuallyhidden;
+}
+
+.mobile-only {
+	@include desktop {
+		display: none!important;
+	}
+	@include tablet {
+		display: none!important;
+	}
+}
+
+.no-mobile {
+	@include mobile {
+		display: none!important;
+	}
+}
+
+.desktop-only {
+	@include mobile {
+		display: none!important;
+	}
+	@include tablet {
+		display: none!important;
+	}
+}
+
+.align-right {
+	text-align: right;
+}

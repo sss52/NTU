@@ -1,0 +1,41 @@
+
+include ../../atoms/button/button
+
+mixin header(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.primaryNav = spec.primaryNav || -1
+	- spec.secondaryNav = spec.secondaryNav || -1
+
+	header.main-header
+		.top-bar
+			span Information for..
+			span Login
+			span Media
+		.nav-bar
+			.left-align
+				span (65) 6791 1744
+			.logo
+				img(src="/assets/ntu/images/ntu-logo.png", alt="*NTU", height="100px", width="100px")
+			.search
+				input(type='text', placeholder='Search..')
+		.nav-menu
+			ul
+				li
+					a(href="#", class="nav__item") 
+						| About NTU
+				li      
+					a(href="#", class="nav__item")
+						| Global
+				li
+					a(href="#", class="nav__item")
+						| Admissions
+				li
+					a(href="#", class="nav__item")
+						| Academic
+				li
+					a(href="#", class="nav__item") 
+						| Research
+				li
+					a(href="#", class="nav__item")
+						| Campus Life

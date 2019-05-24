@@ -1,0 +1,144 @@
+@mixin inline-block() {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+@mixin clearfix() {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after { clear: both; }
+}
+
+@mixin normalise-list() {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+// Absolute Center
+@mixin absolute-center() {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+// Image Responsive
+@mixin img-responsive() {
+    display: block;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+@mixin icomoon($glyph) {
+    @extend %icomoon;
+    content: $glyph;
+}
+
+// Generate font-size and line-height, with standard margin bottom
+@mixin font-size-with-line-height($font-size, $line-height-multiplier, $context: $base-fontsize) {
+    font-size: calc-em($font-size, $context);
+    line-height: ($base-lineheight * $line-height-multiplier * $context / $font-size);
+    margin-top: 0;
+    margin-bottom: ($base-lineheight * $context / $font-size) + em;
+}
+
+@mixin vertical-middle() {
+    &:before {
+        content: "";
+        display: inline-block;
+        margin-left: -5px;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+@mixin background-cover() {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@mixin visuallyhidden() {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+@mixin smMobile {
+    @media (max-width: 374px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+  @media (max-width: $bpTablet - 1) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $bpTablet) and (max-width: $bpDesktop - 1) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $bpDesktop) {
+    @content;
+  }
+}
+
+@mixin lgDesktop {
+  @media (min-width: $bpLgDesktop) {
+    @content;
+  }
+}
+
+@mixin noHover {
+	@media (hover:none), (hover:on-demand) {
+		@content;
+	}
+}
+
+/* Functions */
+@function calc-em($target, $context: $base-fontsize) {
+    @return $target / $context * 1em;
+}
+
+// Mixin for Objectfit
+@mixin objectfit() {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+@keyframes leftRight {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+

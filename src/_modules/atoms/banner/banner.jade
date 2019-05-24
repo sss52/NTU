@@ -1,0 +1,20 @@
+mixin banner(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.banner = spec.banner || ''
+
+	.banner(class=spec.__class)&attributes(attributes)
+		.banner-wrapper
+			for item in spec.banner
+				.content
+					.container
+						if item.subtitle
+							p.subtitle=item.subtitle
+						if item.title
+							h1.title=item.title
+				.image-container
+					img.image(src=item.image)
+		if block
+			block
+		//- else
+		//- 	p This is a rich text editor block.

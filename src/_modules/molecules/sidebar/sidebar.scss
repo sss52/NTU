@@ -1,0 +1,231 @@
+// sidebar styles
+.sidebar {
+	width: 30%;
+	display: inline-block;
+	float: right;
+	padding-left: 40px;
+	font-family: $primaryfont;
+	
+	@include desktop {
+		margin-bottom: 150px;
+	}
+
+	@include tablet {
+        width: 35%;
+		padding-left: 20px;
+	}
+
+	@include mobile {
+        display: none;
+		width: 100%;
+		float: none;
+		padding-left: 0;
+    }
+
+    &.clone-aside {
+        @include mobile {
+            display: block;
+            position: relative;
+            z-index: 3;
+
+            .sidebar-sticky .nice-select {
+                margin: 0 auto 30px;
+                display: block;
+                width: 100%;
+                border-radius: 0;
+                padding: 5px 10px;
+                height: auto;
+                border-bottom: 3px solid #181C62;
+
+                &:active, 
+                &.open, 
+                &:focus {
+                    border: none;
+                    border-bottom: 3px solid #181C62;
+                }
+
+                .current {
+                    font-family: $primaryfont;
+                    font-weight: $bold;
+                    font-size: calc-em(14, $base);
+                }
+
+                .list {
+                    width: 100%;
+                    border-radius: 0;
+
+                    li {
+                        font-size: calc-em(14, $base);
+                        padding: 5px 29px 5px 18px;
+                    }
+                }
+            }
+        }
+    }
+    
+    &-title {
+        font-weight: $normal !important;
+        font-size: calc-em(18, $base) !important;
+    }
+
+	& + .article {
+		width: 70%;
+        float: left;
+
+		@include tablet {
+			width: 65%;
+			float: left;
+		}
+
+		@include mobile {
+			width: 100%;
+			float: none;
+			// padding-top: 30px;
+        }
+        
+        @include desktop {
+            padding-right: 40px;
+        }
+
+		.rte {
+			max-width: 100%;
+		}
+
+		.rte--extra-component:before,
+		.rte--extra-component:after {
+			@include desktop {
+				// width: 5%;
+			}
+		}
+
+		.content--carousel .carousel {
+			@include lgDesktop {
+				margin: 0;
+			}
+		}
+	}
+
+	.sidebar-sticky {
+		&.is_stuck {
+			// margin: -20px 0px 0px;
+			margin: 40px 0px 0px;
+		}
+
+		// @include mobile {
+		// 	.nice-select {
+		// 		margin: 10px auto 30px;
+		// 		display: block;
+		// 		width: 100%;
+
+		// 		.list {
+		// 			width: 100%;
+		// 		}
+		// 	}
+		// }
+	}
+}
+
+.sidebar__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar__list-lvl3 {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+
+	.sidebar__item {
+		.sidebar__link {
+			padding-left: 50px;
+			border-bottom: 1px solid #e3e2e0;
+			background: transparent;
+			color: inherit;
+
+            &.is-active {
+				&:after {
+					transform: scaleX(1);
+				}
+
+				background: #ffffff;
+			}
+			
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: -1px;
+				width: 5px;
+				background: #181C62;
+				transform: scaleX(0);
+				transform-origin: left top;
+				transition: transform .35s ease-in-out;
+			}
+
+			&:hover,
+			&:focus {
+				background: #ffffff;
+
+				&:after {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+
+.sidebar__list-lvl3 > li > .sidebar__link.is-active:after {
+	color: #181C62;
+	transform: scaleX(1);
+}
+
+.sidebar__link {
+	background: transparent;
+	padding: 18px 15px 18px 19px;
+	display: block;
+	line-height: 1.2;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+    font-size: calc-em(14, $base);
+    font-weight: $normal;
+    transition: all .4s linear;
+
+	// .sidebar__item:last-child & {
+	// 	border: 0;
+	// }
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: -1px;
+		width: 5px;
+		background: #181C62;
+		transform: scaleX(0);
+		transform-origin: left top;
+		transition: transform .35s ease-in-out;
+	}
+
+	.is-active & {
+        color: gray;
+        background: #ffffff;
+
+		&:after {
+			transform: scaleX(1);
+		}
+	}
+
+	&:hover,
+	&:focus {
+        background: #ffffff;
+
+		&:after {
+			transform: scaleX(1);
+		}
+	}
+}

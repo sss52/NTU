@@ -1,0 +1,48 @@
+include ../../atoms/button/button
+
+mixin nav(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.primaryNav = spec.primaryNav || -1
+	- spec.secondaryNav = spec.secondaryNav || -1
+
+	//- if spec.__class == 'desktop-nav'
+	//- 	each item, index in site.data.primaryNav
+	//- 		if item.header
+	//- 			.nav-main(class=spec.__class)
+	//- 				.nav-main__features
+	//- 					ul.menu.megamenu
+	//- 						// Add class "is-current" on the li on active page
+	//- 						each itemPri in item.header
+	//- 							//- li.dropdown(class=(spec.primaryNav==index ? "is-current" : ""))
+	//- 							li(class=(spec.primaryNav==index ? "is-current" : ""))
+	//- 								//- a.nav-main__item(href=itemPri.link)= itemPri.name
+	//- 								a(href=itemPri.link)= itemPri.name
+	//- 								if itemPri.submenu
+	//- 									//- +button({
+	//- 									//- 	'__type': 'button',
+	//- 									//- 	'__class': 'btn--nav btn--noanime mobile-only',
+	//- 									//- 	'__iconBefore': 'icon-arrow-down'
+	//- 									//- })
+	//- 									//- .megamenu__dropdown.child
+	//- 									//- 	.megamenu-container
+	//- 									//- ul.menu-col__lvl2.menu-col
+	//- 									ul.sub-menu
+	//- 										each subPri in itemPri.submenu
+	//- 											li
+	//- 												//- a.nav-sub__item(href=subPri.link)= subPri.name
+	//- 												a(href=subPri.link)= subPri.name
+	//- 												if subPri.menu
+	//- 													//- +button({
+	//- 													//- 	'__type': 'button',
+	//- 													//- 	'__class': 'btn--nav btn--noanime mobile-only',
+	//- 													//- 	'__iconBefore': 'icon-arrow-down'
+	//- 													//- })
+	//- 													//- .megamenu__dropdown.sub-grandchild
+	//- 													//-     .megamenu-container
+	//- 													//- ul.menu-col__lvl3.menu-col
+	//- 													ul.sub-menu
+	//- 														each subPriChild in subPri.menu
+	//- 															li
+	//- 																//- a.nav-subchild_item(href=subPriChild.link)= subPriChild.name
+	//- 																a(href=subPriChild.link)= subPriChild.name

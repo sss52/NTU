@@ -1,0 +1,328 @@
+// banner styles
+.banner {
+    position: relative;
+
+    &.left-carousel {
+        .content {
+            .container {
+                text-align: left;
+
+                h1 {
+                    display: block;
+                    line-height: 1.1;
+
+                    a {
+                        color: #ffffff;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                .subhead {
+                    font-size: calc-em(15, $base);
+                    font-weight: bold;
+                    color: #181C62;
+                    text-transform: uppercase;
+                }
+
+                .subtitle {
+                    color: #ffffff;
+                    font-style: italic;
+                    font-size: calc-em(15, $base);
+                }
+            }
+        }
+
+        .banner-carousel {
+            position: relative;
+    
+            .banner-carousel__slick {
+                 display: none;
+                 
+                .slick-wrapper {
+                    .slick-image {
+                        height: 350px;
+                        overflow: hidden;
+    
+                        @include desktop {
+                            height: 400px;
+                        }
+    
+                        img {
+                            @include objectfit();
+                        }
+                    }
+                }
+            }
+    
+            .banner-carousel__dots {
+                position: absolute;
+                bottom: 10%;
+                width: 100%;
+    
+                @include tablet {
+                    bottom: 10%;
+                }
+    
+                @include desktop {
+                    bottom: 10%;
+                }
+    
+                .container {
+                    .carousel-dots__wrap {
+                        width: 100%;
+                        text-align: left;
+                        display: inline-flex;
+                        justify-content: flex-start;
+                        align-items: center;
+    
+                        .pagination__page {
+                            position: relative;
+                            right: 0px;
+                            
+                            @include mobile {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-wrapper {
+        display: block;
+        position: relative;
+
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 35%;
+
+            .container {
+                margin: 0 auto;
+                text-align: center;
+
+                h1 {
+                    font-family: $primaryfont;
+                    font-size: calc-em(35, $base);
+                    font-weight: $semi-bold;
+                    color: #ffffff;
+                    margin: 0px;
+                    display: inline-block;
+                    width: auto;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 40%;
+                        margin: 0 auto;
+                        padding: 20px 0 0;
+                        border-bottom: 2px solid #181C62;
+                    }
+                }
+            }
+        }
+
+        .image-container {
+            height: 350px;
+            overflow: hidden;
+
+            @include desktop {
+                height: 400px;
+            }
+
+            img {
+                @include objectfit();
+            }
+        }
+
+        & + .breadcrumbs {
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            margin: 0px;
+
+            .breadcrumbs__list {
+                border-bottom: none;
+                border-top: 1px solid #bfbfbf;
+
+                .breadcrumbs__item {
+                    &:before {
+                        color: #ffffff;
+                    }
+                    
+                    .breadcrumbs__link {
+                        
+                        span {
+                            color: #ffffff;
+                        }                        
+                    }
+
+                    a.breadcrumbs__link {
+                        &:hover {
+                            span {
+                                color: #181C62;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-carousel {
+        position: relative;
+
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 35%;
+
+            .container {
+                margin: 0 auto;
+                text-align: center;
+
+                h1 {
+                    font-family: $primaryfont;
+                    font-size: calc-em(35, $base);
+                    font-weight: $semi-bold;
+                    color: #ffffff;
+                    margin: 0px;
+                    display: inline-block;
+                    width: auto;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 40%;
+                        margin: 0 auto;
+                        padding: 20px 0 0;
+                        border-bottom: 2px solid #181C62;
+                    }
+                }
+            }
+        }
+
+        .banner-carousel__slick {
+             display: none;
+             
+            .slick-wrapper {
+                .slick-image {
+                    height: 350px;
+                    overflow: hidden;
+
+                    @include desktop {
+                        height: 400px;
+                    }
+
+                    img {
+                        @include objectfit();
+                    }
+                }
+            }
+        }
+
+        .banner-carousel__dots {
+            position: absolute;
+            // bottom: 40%;
+            bottom: 10%;
+            width: 100%;
+
+            @include tablet {
+                bottom: 10%;
+            }
+
+            @include desktop {
+                bottom: 10%;
+            }
+
+            .container {
+                .carousel-dots__wrap {
+                    width: 100%;
+                    text-align: center;
+
+                    .pagination__page {
+                        position: absolute;
+                        order: 2;
+                        right: 25px;
+                        margin: 0px 0px 0px 15px;
+
+                        @include mobile {
+                            display: none;
+                        }
+
+                        span {
+                            color: #ffffff;
+                            font-family: $secondaryfont;
+                            font-weight: $normal;
+                        }
+                    }
+                    
+                    .slick-dots {
+                        order: 1;
+                        margin: 0px;
+                        padding: 0px;
+                        list-style-type: none;
+                        line-height: 0;
+
+                        li {
+                            display: inline-block;
+                            margin: 0px 8px;
+                            cursor: pointer;
+
+                            &:first-child {
+                                margin: 0px 8px 0px 0px;
+                            }
+
+                            button {
+                                font-size: 0;
+                                line-height: 0;
+                                display: block;
+                                width: 8px;
+                                height: 8px;
+                                padding: 4px;
+                                cursor: pointer;
+                                color: transparent;
+                                border: 2px solid gray;
+                                outline: none;
+                                background: transparent;
+                                border-radius: 50%;
+                                transform: scale(1);
+                                transition: all .25s linear;
+
+                                &:hover {
+                                    // transform: scale(1.3);
+                                    background: #ffffff;
+                                    border: 2px solid #ffffff;
+                                }
+                            }
+
+                            &.slick-active {
+                                button {
+                                    // transform: scale(1.3);
+                                    background: #ffffff;
+                                    border: 2px solid #ffffff;
+
+                                    &:after {
+                                        content: '';
+                                        width: 11px;
+                                        height: 11px;
+                                        padding: 9px;
+                                        border: 2px solid #181C62;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        top: -7px;
+                                        left: -7px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

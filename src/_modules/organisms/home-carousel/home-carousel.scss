@@ -1,0 +1,319 @@
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 375px;
+    }
+}
+
+.home-carousel {
+    display: none;
+    position: relative;
+
+    &__slick {
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    .slick {
+                        &-wrapper {
+                            position: relative;
+                        }
+
+                        &-text {
+                            position: absolute;
+                            z-index: 3;
+                            width: 100%;
+                            top: 25%;
+
+                            @include tablet {
+                                top: 30%;
+                            }
+
+                            @include desktop {
+                                top: 30%;
+                            }
+
+                            @include lgDesktop {
+                                top: 40%;
+                            }
+
+                            &__category {
+                                font-family: $secondaryfont;
+                                font-weight: $semi-bold;
+                                font-size: calc-em(15, $base);
+                                color: #181C62;
+                                text-transform: uppercase;
+                            }
+
+                            &__title {
+                                font-family: $primaryfont;
+                                font-weight: $bold;
+                                font-size: calc-em(28, $base);
+                                line-height: 1.15;
+
+                                @include desktop {
+                                    font-size: calc-em(40, $base);
+                                }
+
+                                span {
+                                    a {
+                                        color: #ffffff;
+
+                                        &:hover,
+                                        &:focus {
+                                            outline: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &-image {
+                            position: relative;
+                            height: 75vh;
+
+                            &:before {
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                background: transparent;
+                                background-repeat: repeat-x;
+                                position: absolute;
+                                z-index: 1;
+                                top: 0;
+                            }
+
+                            &:after {
+                                content: '';
+                                display: block;
+                                height: 100%;
+                                width: 100%;
+                                background: transparent;
+                                background-repeat: repeat-y;
+                                position: absolute;
+                                z-index: 1;
+                                top: 0px;
+                            }
+
+                            @include tablet {
+                                height: 45vh;
+                                overflow: hidden;
+
+                                &:before {
+                                    height: 100%;
+                                }
+                            }
+
+                            @include desktop {
+                                height: 600px;
+                                overflow: hidden;
+
+                                &:before {
+                                    height: 100%;
+                                }
+                            }
+
+                            @include lgDesktop {
+                                height: 650px;
+                                overflow: hidden;
+
+                                &:before {
+                                    height: 100%;
+                                }
+                            }
+
+                            img {
+                                @include objectfit();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home-carousel__arrows {
+        position: absolute;
+        // bottom: 45%;
+        bottom: 20%;
+        width: 100%;
+
+        @include tablet {
+            bottom: 30%;
+        }
+
+        @include desktop {
+            bottom: 33%;
+        }
+
+        @include lgDesktop {
+            bottom: 28%;
+        }
+
+        .carousel-arrows__wrap {
+            display: inline-flex;
+            align-items: center;
+            
+            #progress {
+                &.progress {
+                    img {
+                        width: 120px;
+                        height: 120px;
+                        // border: 1px solid #ffffff;
+                        border-radius: 50%;
+                    }
+                }
+
+                .pie_progress__svg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    svg {
+                        -webkit-backface-visibility: hidden;  
+                    }
+                }
+
+                .thumb-carousel__slick {
+                    width: 120px;
+                    height: 120px;
+                    overflow: hidden; 
+
+                    .slick-list {
+                        width: 120px;
+                        height: 120px;
+                    }
+
+                    .slick-image {
+                        width: 120px;
+                        height: 120px;
+
+                        img {
+                            @include objectfit();
+                        }
+                    }
+                }
+            }
+
+            .progress-arrows {
+                display: inline-flex;
+                align-items: center;
+                color: #ffffff;
+                margin: 0px 0px 0px 25px;
+
+                .prev {
+                    display: none !important;
+                }
+
+                .next:before {
+                    // vertical-align: middle;
+                    font-size: calc-em(30, $base);
+                    position: relative;
+                    top: -2px;
+                    margin: 0px 20px 0px 0px;
+                }
+
+                span {
+                    display: block;
+                    font-family: $secondaryfont;
+                    font-weight: $normal;
+                    font-size: calc-em(16, $base);
+                    text-transform: uppercase;
+                }
+
+                .slick-arrow {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    .home-carousel__dots {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        text-align: right;
+
+        .container {
+            .carousel-dots__wrap {
+                display: inline-flex;
+                align-items: center;
+
+                .pagination__page {
+                    order: 2;
+                    margin: 0px 0px 0px 15px;
+
+                    span {
+                        color: #ffffff;
+                        font-family: $secondaryfont;
+                        font-weight: $normal;
+                    }
+                }
+                
+                .slick-dots {
+                    order: 1;
+                    margin: 0px;
+                    padding: 0px;
+                    list-style-type: none;
+                    line-height: 0;
+
+                    li {
+                        display: inline-block;
+                        margin: 0px 8px;
+                        cursor: pointer;
+
+                        &:first-child {
+                            margin: 0px 8px 0px 0px;
+                        }
+
+                        button {
+                            font-size: 0;
+                            line-height: 0;
+                            display: block;
+                            width: 8px;
+                            height: 8px;
+                            padding: 4px;
+                            cursor: pointer;
+                            color: transparent;
+                            border: 2px solid gray;
+                            outline: none;
+                            background: transparent;
+                            border-radius: 50%;
+                            transform: scale(1);
+                            transition: all .25s linear;
+
+                            &:hover {
+                                // transform: scale(1.3);
+                                background: #ffffff;
+                                border: 2px solid #ffffff;
+                            }
+                        }
+
+                        &.slick-active {
+                            button {
+                                // transform: scale(1.3);
+                                background: #ffffff;
+                                border: 2px solid #ffffff;
+
+                                &:after {
+                                    content: '';
+                                    width: 11px;
+                                    height: 11px;
+                                    padding: 9px;
+                                    border: 2px solid #181C62;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    top: -7px;
+                                    left: -7px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

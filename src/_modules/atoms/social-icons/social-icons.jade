@@ -1,0 +1,9 @@
+mixin social-icons(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	ul.social-icons
+		each icon, index in spec.icons
+			li
+				a(href=icon.link class=icon.addthis)
+					i.icon(class=icon.class)
