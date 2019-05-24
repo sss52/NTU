@@ -10,70 +10,72 @@ mixin header(spec)
 
 	header.main-header
 		.top-bar
-			.topbar-wrap
-				.topbar-link
-					ul
-						li
-							+input-select({
-								'__options': ['Information for...', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
-								'__display': 'Information for...',
-								'__class': 'topbar-select'
-							})
-						li
-							+input-select({
-								'__options': ['Logins', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
-								'__display': 'Logins',
-								'__class': 'topbar-select'
-							})
-						li
-							a(href='/') Media
-			.topbar-wrap
-				.topbar-api
-					ul
-						li
-							+button({
-								'__type': 'anchor',
-								'__class': 'btn--noborder',
-								'__link': '/',
-								'__iconBefore': 'icon-facebook'
-							})
-						li
-							+button({
-								'__type': 'anchor',
-								'__class': 'btn--noborder',
-								'__link': '/',
-								'__iconBefore': 'icon-tweet'
-							})
-						li
-							+button({
-								'__type': 'anchor',
-								'__class': 'btn--noborder',
-								'__link': '/',
-								'__iconBefore': 'icon-youtube'
-							})
-						li
-							+button({
-								'__type': 'anchor',
-								'__class': 'btn--noborder',
-								'__link': '/',
-								'__iconBefore': 'icon-instagram'
-							})
-
-		.nav-bar
-			.left-align
-				i.icon.icon-phone
-				span Contact us
-				span.phone-number (65) 6791 1744
-			.logo
-				img(src="/assets/ntu/images/ntu-logo.png", alt="*NTU", height="100px", width="100px")
-			.search
-				input(type='text', placeholder='Search for something..')
-				+button({
-								'__type': 'anchor',
-								'__class': 'btn--noborder',
-								'__link': '/',
-								'__iconBefore': 'icon-search'
-							})
+			.container
+				.top-bar-nav
+					.topbar-wrap
+						.topbar-link
+							ul
+								li
+									+input-select({
+										'__options': ['Information for...', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+										'__display': 'Information for...',
+										'__class': 'topbar-select'
+									})
+								li
+									+input-select({
+										'__options': ['Logins', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+										'__display': 'Logins',
+										'__class': 'topbar-select'
+									})
+								li
+									a(href='/') Media
+					.topbar-wrap
+						.topbar-api
+							ul
+								li
+									+button({
+										'__type': 'anchor',
+										'__class': 'btn--noborder',
+										'__link': '/',
+										'__iconBefore': 'icon-facebook'
+									})
+								li
+									+button({
+										'__type': 'anchor',
+										'__class': 'btn--noborder',
+										'__link': '/',
+										'__iconBefore': 'icon-tweet'
+									})
+								li
+									+button({
+										'__type': 'anchor',
+										'__class': 'btn--noborder',
+										'__link': '/',
+										'__iconBefore': 'icon-youtube'
+									})
+								li
+									+button({
+										'__type': 'anchor',
+										'__class': 'btn--noborder',
+										'__link': '/',
+										'__iconBefore': 'icon-instagram'
+									})
+		.container
+			.nav-bar
+				.left-align
+					i.icon.icon-phone
+					span Contact us
+					span.phone-number (65) 6791 1744
+				.logo
+					img(src="/assets/ntu/images/ntu-logo.png", alt="*NTU", height="100px", width="100px")
+				.search
+					input(type='text', placeholder='Search for something..')
+					+button({
+									'__type': 'anchor',
+									'__class': 'btn--noborder',
+									'__link': '/',
+									'__iconBefore': 'icon-search'
+								})
 
 		.nav-menu
 			ul
