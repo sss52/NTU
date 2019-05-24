@@ -1,1 +1,12 @@
 // header-college styles
+.main-header {
+    &.ntu-college {
+		.top-bar {
+			display: flex;
+
+			.topbar {
+
+			}
+		}
+	}
+}

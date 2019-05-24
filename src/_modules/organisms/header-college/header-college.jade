@@ -1,6 +1,43 @@
+include ../../atoms/button/button
+include ../../atoms/input-select/input-select
+
 mixin header-college(spec)
 	- spec = spec || {}
 	- spec.__class = spec.__class || ''
 
-	div(class=spec.__class)&attributes(attributes)
-		p This is an example paragraph for the header-college module
+	header.main-header.ntu-college
+		.top-bar
+			.topbar-logo
+				img(src='')
+			.topbar-link
+				ul
+					li
+						+input-select({
+							'__options': ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+							'__display': 'Information for...',
+							'__class': 'topbar-select'
+						})
+					li
+						+input-select({
+							'__options': ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+							'__display': 'Logins',
+							'__class': 'topbar-select'
+						})
+					li
+						a(href='/') Media
+					li
+						+input-select({
+							'__options': ['Facebook', 'Twitter', 'Instagram'],
+							'__display': 'Social Media',
+							'__class': 'topbar-select'
+						})
+			.topbar-api
+				ul
+					li
+						+button({
+							'__type': 'anchor',
+							'__class': 'btn-noborder',
+							'__link': '/',
+							'__iconBefore': 'icon-ntu-logo'
+						})
+
