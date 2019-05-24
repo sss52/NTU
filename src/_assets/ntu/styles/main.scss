@@ -36,7 +36,7 @@ body {
 	color: $bodycolor;
 	position: relative;
     margin: 0px;
-
+    overflow-x: hidden;
 
     p {
         font-size: calc-em(16, $base);
@@ -301,14 +301,14 @@ body {
         background-color: white;
     }
     &__with-purple-box {
-        padding: 120px 0px 90px 0px;
+        padding: 120px 0px 60px 0px;
         &::after {
             content: "";
             display: block;
             width: 50%;
             position: absolute;
             right: 0;
-            top: 80px;
+            top: 70px;
             height: 50%;
             background-color: $purple;
         }
@@ -336,7 +336,7 @@ body {
 @import '../_modules/molecules/two-column-image-text/two-column-image-text';
 @import '../_modules/molecules/rte/rte';
 @import '../_modules/molecules/video-box/video-box';
-
+@import '../_modules/molecules/news-carousel/news-carousel';
 
 @import '../_modules/organisms/site-header/site-header';
 
@@ -357,3 +357,4 @@ body {
 @import '../_modules/organisms/cta-section/cta-section';
 @import '../_modules/organisms/global-footprints/global-footprints';
 @import '../_modules/organisms/strategy-section/strategy-section';
+@import '../_modules/organisms/news-section/news-section';

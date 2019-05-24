@@ -4,14 +4,27 @@ mixin social-feeds(spec)
 
 		section.social-feeds(class=spec.__class)
 				.container
-					each item in site.data.socialFeeds
-						.card-view(style="background: url("+item.image+") no-repeat center; background-size: cover;background-position: center;")
-								div.social-icon-logo
-									i.icon(class=item.icon)
-								.company
-									p.tweet-feeds= item.title
-								.user
-									.user_avatar
-										img(src=item.avatar)
-									.user_info
-										a.user_name(href='#')= item.username
+					.wrapper
+						.first-half
+							each item in site.data.socialFeeds
+								.card-view(style="background: url("+item.image+") no-repeat center; background-size: cover;background-position: center;")
+										div.social-icon-logo
+											i.icon(class=item.icon)
+										.company
+											p.tweet-feeds= item.title
+										.user
+											.user_avatar
+												img(src=item.avatar)
+											.user_info
+												a.user_name(href='#')= item.username
+						.second-half
+								.card-view(style="background: url(/assets/ntu/images/social-4.png) no-repeat center;width:100%;height:100%; background-size: cover;background-position: center;")
+										div.social-icon-logo
+											i.icon.icon-facebook
+										.company
+											p.tweet-feeds
+										.user
+											.user_avatar
+												img(src="/assets/ntu/images/social-logo.png")
+											.user_info
+												a.user_name(href='#') NTU Singapore

@@ -1,0 +1,14 @@
+include ../../molecules/news-carousel/news-carousel
+
+mixin news-section(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.news-section.general-content.general-content__bg-white(class=spec.__class)&attributes(attributes)
+    .container
+      .row
+        .col-md-12
+          h2 What's new
+        .col-md-12
+          +news-carousel()
+    

@@ -1,0 +1,44 @@
+include ../article-card/article-card
+
+
+mixin news-carousel(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .news-carousel(class=spec.__class)&attributes(attributes)
+    .carousel-slider
+      .slide
+        +article-card({
+          "title":"​Hwa Chong Institution tops Anatomy Challenge 2019",
+          "type":"News",
+          "date":"20 April 2019",
+          "description":"Repeating a 2017 feat, a team of four HCI students emerged champions at this year’s LKCMedicine Anatomy Challenge"
+        })
+      .slide
+        +article-card({
+          "title":"​LKCMedicine PGY1 doctors win NHG Teaching Awards",
+          "type":"News",
+          "date":"20 April 2019",
+          "description":"Repeating a 2017 feat, a team of four HCI students emerged champions at this year’s LKCMedicine Anatomy Challenge"
+        })
+      .slide
+        +article-card({
+          "title":"​​Imperial Exchange 2019: Reflections",
+          "type":"News",
+          "date":"20 April 2019",
+          "description":"Repeating a 2017 feat, a team of four HCI students emerged champions at this year’s LKCMedicine Anatomy Challenge"
+        })
+      .slide
+        +article-card({
+          "title":"​Singapore’s Chief Health Scientist makes first visit to LKCMedicine",
+          "type":"News",
+          "date":"20 April 2019",
+          "description":"Repeating a 2017 feat, a team of four HCI students emerged champions at this year’s LKCMedicine Anatomy Challenge"
+        })
+      .slide
+        +article-card({
+          "title":"Global, regional, and national burden of neurological disorders, 1990-2016",
+          "type":"News",
+          "date":"20 April 2019",
+          "description":"Repeating a 2017 feat, a team of four HCI students emerged champions at this year’s LKCMedicine Anatomy Challenge"
+        })
