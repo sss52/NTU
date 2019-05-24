@@ -1,0 +1,17 @@
+//- include ../../molecules/rte/rte
+
+mixin two-column-image-text(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.two-column-image-text(class=spec.__class)&attributes(attributes)
+		.container
+			.content-wrapper
+				.image-container
+					img(src=spec.__image)
+				.text-container
+					if spec.__cat
+						p.cat= spec.__cat
+					.rte
+						if block
+							block
