@@ -6,22 +6,24 @@ mixin school-header(spec)
     nav.secondary-nav.main-nav
       .container
         .row
-          .main-nav__logo
-            img(src="/assets/ntu/images/ntu-logo-white.svg", alt="ntu logo")
-          .main-nav__links
-            ul
-              each item in site.data.schoolNav.secondary
-                li
-                  a(href=item.link)
-                    span=item.name
+          .nav-wrapper
+            .main-nav__logo
+              img(src="/assets/ntu/images/ntu-logo-white.svg", alt="ntu logo")
+            .main-nav__links
+              ul
+                each item in site.data.schoolNav.secondary
+                  li
+                    a(href=item.link)
+                      span=item.name
     nav.primary-nav.main-nav
       .container  
         .row
-          .main-nav__logo
-            img(src="/assets/ntu/images/LKC Logo.svg", alt="LKC logo")
-          .main-nav__links
-            ul
-              each item in site.data.schoolNav.primary 
-                li
-                  a(href=item.link)
-                    span=item.name
+          .nav-wrapper
+            .main-nav__logo
+              img(src="/assets/ntu/images/LKC Logo.svg", alt="LKC logo")
+            .main-nav__links
+              ul
+                each item in site.data.schoolNav.primary 
+                  li
+                    a(href=item.link)
+                      span=item.name
