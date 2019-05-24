@@ -197,6 +197,16 @@
         }
     }
 
+    &--red {
+        span {
+            color: $pink;
+            text-transform: none;
+            font-weight: normal;
+        }
+
+        
+    }
+
     &--fullwidth {
         width: 100%;
     }
