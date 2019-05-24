@@ -218,14 +218,12 @@ body {
             }
         }
 
-
-
         .section-title {
             margin: 0px;
-            font-size: calc-em(32, $base);
+            font-size: calc-em(20, $base);
 
             @include desktop {
-                font-size: calc-em(50, $base);
+                font-size: calc-em(32, $base);
             }
         }
 
@@ -330,5 +328,5 @@ body {
 @import '../_modules/organisms/school-header/school-header';
 @import '../_modules/organisms/school-banner/school-banner';
 @import '../_modules/organisms/cta-section/cta-section';
+@import '../_modules/organisms/global-footprints/global-footprints';
 @import '../_modules/organisms/strategy-section/strategy-section';
-
