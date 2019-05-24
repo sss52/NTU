@@ -87,9 +87,7 @@
     "malihu-custom-scrollbar-plugin": "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js",
     "masonry-layout": "./node_modules/masonry-layout/masonry.js"
   },
-  "browserify-shim": {
-
-  },
+  "browserify-shim": {},
   "browserify-global-shim": {
     "jquery": "$",
     "jQuery": "$"
