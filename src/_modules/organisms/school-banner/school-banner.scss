@@ -106,5 +106,14 @@
 				}
 			}
 		}
+
+		.btn {
+			padding: 20px 25px;
+			text-transform: none;
+			font-size: calc-em(18, $base);
+			font-weight: $normal;
+			color: $white;
+			border: 1px solid $white;
+		}
 	}
 }
