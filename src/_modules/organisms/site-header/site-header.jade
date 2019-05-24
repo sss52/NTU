@@ -1,5 +1,6 @@
 
 include ../../atoms/button/button
+include ../../atoms/input-select/input-select
 
 mixin header(spec)
 	- spec = spec || {}
@@ -9,9 +10,55 @@ mixin header(spec)
 
 	header.main-header
 		.top-bar
-			span Information for..
-			span Login
-			span Media
+			.topbar-wrap
+				.topbar-link
+					ul
+						li
+							+input-select({
+								'__options': ['Information for...', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+								'__display': 'Information for...',
+								'__class': 'topbar-select'
+							})
+						li
+							+input-select({
+								'__options': ['Logins', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+								'__display': 'Logins',
+								'__class': 'topbar-select'
+							})
+						li
+							a(href='/') Media
+			.topbar-wrap
+				.topbar-api
+					ul
+						li
+							+button({
+								'__type': 'anchor',
+								'__class': 'btn--noborder',
+								'__link': '/',
+								'__iconBefore': 'icon-facebook'
+							})
+						li
+							+button({
+								'__type': 'anchor',
+								'__class': 'btn--noborder',
+								'__link': '/',
+								'__iconBefore': 'icon-tweet'
+							})
+						li
+							+button({
+								'__type': 'anchor',
+								'__class': 'btn--noborder',
+								'__link': '/',
+								'__iconBefore': 'icon-youtube'
+							})
+						li
+							+button({
+								'__type': 'anchor',
+								'__class': 'btn--noborder',
+								'__link': '/',
+								'__iconBefore': 'icon-instagram'
+							})
+
 		.nav-bar
 			.left-align
 				span (65) 6791 1744
@@ -22,9 +69,9 @@ mixin header(spec)
 		.nav-menu
 			ul
 				li
-					a(href="#", class="nav__item") 
+					a(href="#", class="nav__item")
 						| About NTU
-				li      
+				li
 					a(href="#", class="nav__item")
 						| Global
 				li
@@ -34,7 +81,7 @@ mixin header(spec)
 					a(href="#", class="nav__item")
 						| Academic
 				li
-					a(href="#", class="nav__item") 
+					a(href="#", class="nav__item")
 						| Research
 				li
 					a(href="#", class="nav__item")

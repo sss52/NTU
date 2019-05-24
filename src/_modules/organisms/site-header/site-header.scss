@@ -636,6 +636,53 @@ header {
             }
         }
     }
+    .top-bar {
+        display: flex;
+        height: 44px;
+        padding: 5px 35px;
+
+        span {
+            margin: 0;
+        }
+
+        .topbar {
+            &-wrap {
+                display: flex;
+                width: 50%;
+                align-items: center;
+
+                &:nth-child(2) {
+                    justify-content: flex-end;
+                }
+            }
+            
+            &-link,
+            &-api {
+                ul {
+                    display: flex;
+                    list-style-type: none;
+
+                    li {
+                        margin: 0px 1em;
+                        color: $white;
+
+                        a {
+                            color: $white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .icon{
+                    font-size:1.4em;
+                }
+            }
+            &-select{
+                BACKGROUND: transparent;
+                border: none;
+                color: #fff;
+               }
+        }
+    }
 
     &.is-home {
         position: fixed;
