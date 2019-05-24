@@ -1,0 +1,14 @@
+// featured-card styles
+.featured-card {
+  display: block;
+  &__content {
+    padding: 0px 30px;
+  }
+  &__tag {
+    color: $green;
+    font-size: calc-em(18, $base);
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+}
