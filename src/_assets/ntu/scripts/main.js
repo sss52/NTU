@@ -18,6 +18,8 @@ import HomeCarousel from 'organisms/home-carousel/home-carousel';
 import EventCarousel from 'organisms/event-carousel/event-carousel';
 import SelectInterest from 'organisms/select-interest/select-interest';
 import Excellence from 'organisms/excellence/excellence';
+import NewsCarousel from 'molecules/news-carousel/news-carousel';
+
 
 
 $(() => {
@@ -30,6 +32,10 @@ $(() => {
     new EventCarousel();
     new Excellence();
     new SelectInterest;
+
+    if($('.news-carousel').length) {
+      new NewsCarousel();
+    }
 
     if($('.facybox').length) {
       $('.facybox').fancybox();
