@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a2afvf');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a2afvf#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?a2afvf') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?a2afvf') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?a2afvf##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?shrika');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?shrika#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?shrika') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?shrika') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?shrika##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -85,6 +85,11 @@
 .icon-instagram {
   &:before {
     content: $icon-instagram; 
+  }
+}
+.icon-arrow-up-right {
+  &:before {
+    content: $icon-arrow-up-right; 
   }
 }
 
