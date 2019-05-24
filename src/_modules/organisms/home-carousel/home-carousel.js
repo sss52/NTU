@@ -36,7 +36,7 @@ export default class HomeCarousel {
                                         </div> \
                                         <div class="cat"> \
                                             ' + cat + '\
-                                            <i class="icon icon-arrow-right"></i> \
+                                            <i class="icon icon-arrow-up-right"></i> \
                                         </div> \
                                         <p>' + title + '</p> \
                                     </div> \
