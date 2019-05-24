@@ -149,11 +149,11 @@ body {
             }
         }
 
-        p {
-            font-size: calc-em(16, $base);
-            line-height: 2.0;
-            margin: 1.5em 0;
-        }
+        // p {
+        //     font-size: calc-em(16, $base);
+        //     line-height: 2.0;
+        //     margin: 1.5em 0;
+        // }
 
         h1, h2, h3, h4, h5 {
             font-family: $secondaryfont;
@@ -293,6 +293,9 @@ body {
 
 .general-content {
     padding: 30px 0px;
+    &__bg-white {
+        background-color: white;
+    }
 }
 
 
