@@ -1,13 +1,40 @@
-mixin school-banner(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
+include ../../atoms/button/button
 
-  .school-banner(class=spec.__class)&attributes(attributes)
-    .school-banner__image
-      img(src=spec.image alt='banner image')
-    .school-banner__content
-      .container
-        .row
-          .col-md-12
-            .school-banner__title
-              h1=spec.title
+mixin school-banner(spec)
+	- spec = spec || {}
+	- spec.class = spec.class || ''
+
+	.school-banner(class=spec.class)&attributes(attributes)
+		.school-banner__image
+			img(src=spec.image alt='banner image')
+		.school-banner__content
+			.container
+				.row
+					.col-md-12
+						.school-banner__title
+							h1=spec.title
+						if spec.subtitle
+							.school-banner__subtitle
+								p=spec.subtitle
+						
+						if spec.link
+							+button({
+								'__type': 'anchor',
+								'__text': 'Find out more',
+								'__class': 'btn--border',
+								'__link': spec.link,
+								'__iconAfter': 'icon-arrow-right'
+							})
+				
+			if spec.news
+				.news-wrap
+					.container
+						each item, index in spec.news
+							.news-box
+								.news-box__cat
+									span
+										=item.category
+										=item.date
+								.news-box__title
+									a(href=item.link)
+										span=item.title

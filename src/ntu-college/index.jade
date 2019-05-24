@@ -1,8 +1,37 @@
-extends ../_layouts/ntu_college
+extends ../_layouts/base-school
+
+include ../_modules/organisms/school-banner/school-banner
+include ../_modules/organisms/cta-section/cta-section
 
 block config
 	//- Correct base url pathing for this page
 	- var baseUrl = '../'
 
 block content
-	p ntu-college page
+	+school-banner({
+		"image":"/assets/ntu/images/NTU_GlobalDigitalArt.jpg",
+		"class":"banner-news",
+		"title":"NTU Global Digital Art Prize 2019: Fourth Industrial Revolutions",
+		"subtitle":"Taking the form of a biennial competition, it recognises global artists and technologists with extraordinary creativity in digitally mediated art, design and cultural heritage",
+		"link":"/",
+		"news": [
+			{
+				"category":"News",
+				"date":"8 April 2019",
+				"title":"Deadline extended for NTU Global Digital Art Prize 2019!",
+				"link":"/"
+			},
+			{
+				"category":"News",
+				"date":"1 April 2019",
+				"title":"ADM - Quiet Dream series deals with marriage migration issues",
+				"link":"/"
+			},
+			{
+				"category":"News",
+				"date":"25 April 2019",
+				"title":'SoH Faculty (English) published in volume of essays "Narrating Death"',
+				"link":"/"
+			}
+		] 
+	})

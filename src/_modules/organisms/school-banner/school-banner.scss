@@ -1,40 +1,81 @@
 // school-banner styles
 .school-banner {
-  display: block;
-  position: relative;
-  &__image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  &__content {
-    width: 100%;
-    display: block;
-    padding: 180px 0px;
-    &::before {
-      display: block;
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(0,0,0,0.4);
-    }
-  }
-  .container {
-    .school-banner__title {
-  
-      h1 {
-        color: white;
-      }
-    }
-  }
- 
+	display: block;
+	position: relative;
+	&__image {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 0;
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__content {
+		width: 100%;
+		display: block;
+		padding: 180px 0px;
+		&::before {
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0.4);
+		}
+	}
+	.container {
+		.school-banner__title {
+	
+			h1 {
+				color: white;
+			}
+		}
+	}
+
+	&.banner-news {
+		.school-banner {
+			&__content {
+				.news {
+					&-wrap {
+						width: 100%;
+						position: absolute;
+						bottom: 0;
+
+						.container {
+							display: flex;
+						}
+					}
+
+					&-box {
+						width: 20%;
+						padding: 20px;
+						background: $white;
+					}
+				}
+			}
+
+			&__title {
+				width: 50%;
+
+				h1 {
+					font-size: calc-em(36, $base);
+				}
+			}
+
+			&__subtitle {
+				width: 50%;
+
+				p {
+					color: $white;
+					font-size: calc-em(15, $base);
+					line-height: 1.5;
+				}
+			}
+		}
+	}
 }
