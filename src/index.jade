@@ -5,6 +5,7 @@ include _modules/organisms/event-carousel/event-carousel
 include _modules/organisms/select-interest/select-interest
 include _modules/organisms/excellence/excellence
 include _modules/organisms/social-feeds/social-feeds
+include _modules/organisms/research/research
 
 block content
 	+home-carousel()
@@ -13,25 +14,26 @@ block content
 
 	+excellence()
 
-	section.research-section
-		.grid-flex
-			//.col.col-image(style='background-image: url(/assets/ntu/images/research-2.png);')
-			img.col.col-image(src='/assets/ntu/images/research-1.png')
-			.col.col-text.col-left
-				.Aligner-item
-					p.heading Singapore President and NTU new  Chancellor ​Halimah Yacob made her first visit to the campus
-					p.desc During a tour of NTU’s latest facilities, including the new residential halls at North Hill and Nanyang Crescent, President Halimah got a close-up look at the university's Residential Education programme, which offers a variety of learning activities hosted by the halls of residence for student residents. 
-					button See research
-						i.icon.icon-arrow-right
-		.grid-flex.inverse-section
-			img.col.col-image(style='top: -50px;position: relative;' src='/assets/ntu/images/research-1.png')
-			.col.col-text
-				.Aligner-item
-					p.heading Agilent Technologies and Nanyang Technological University collaborate on wastewater treatment research.
-					p.desc Scientists and engineers from NEWRI aim to gain a better understanding of microbes capable of degrading various materials so as to harness them for wastewater and waste treatment.
-					button See research
-						i.icon.icon-arrow-right
+	+research()
 
 	+event-carousel()
 
 	+social-feeds()
+
+	.dw
+		.dw-pnl
+			.dw-pnl__cntnt.bd--white.tx--white
+				ul
+					li Configurable
+					li Responsive
+					li Supports clusters
+		.dw-pnl
+			img.dw-pnl__cntnt(src='https://unsplash.it/419/?random')
+		.dw-pnl
+			.dw-pnl__cntnt.tx--white.bd--white
+			p
+				| Phasellus malesuada, urna non auctor viverra, libero ex pellentesque urna, id rhoncus eros lacus tristique risus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+		.dw-pnl
+			img.dw-pnl__cntnt(src='https://unsplash.it/445/?random')
+		.dw-pnl
+			img.dw-pnl__cntnt(src='https://unsplash.it/423/?random')
