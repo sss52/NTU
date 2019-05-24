@@ -10,8 +10,10 @@
                 color: $black;
             }
 
-            .image-container {
-                margin-top: -100px;
+            @include desktop {
+                .image-container {
+                    margin-top: -100px;
+                }
             }
         }
 
@@ -24,11 +26,16 @@
     }
 
     .content-wrapper {
-        display: flex;
+        display: block;
         background: $blue3;
-        padding: 60px 40px;
-        flex-direction: row-reverse;
+        padding: 20px;
         color: $white;
+
+        @include desktop {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 60px 40px;
+        }
 
         h1, h2, h3, h4, h5, h6 {
             color: $white;
@@ -48,10 +55,12 @@
     &.reversed .content-wrapper {
         flex-direction: row;
 
-        .image-container {
-            padding-right: 30px;
+        @include desktop {
+            .image-container {
+                padding-right: 30px;
+            }
         }
-
+        
         .text-container {
             padding-right: 0;
         }
@@ -73,10 +82,12 @@
     .image-container {
         width: 100%;
         display: block;
+        margin-bottom: 20px;
 
         @include desktop {
             flex-grow: 1;
             width: 50%;
+            margin-bottom: 0;
         }
 
         img {
@@ -89,12 +100,13 @@
     .text-container {
         width: 100%;
         display: block;
-        padding-right: 30px;
+        padding-right: 0;
 
         @include desktop {
             flex-grow: 1;
             width: 50%;
             position: relative;
+            padding-right: 30px;
         }
     }
     

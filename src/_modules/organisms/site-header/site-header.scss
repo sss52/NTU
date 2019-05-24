@@ -292,3 +292,6 @@ header {
   }
 
 
+.headroom--not-top + #main {
+	padding-top: 198px;
+}
