@@ -3,24 +3,26 @@ mixin featured-card(spec)
   - spec.__class = spec.__class || ''
 
   article.featured-card(class=spec.__class)&attributes(attributes)
-    .col-md-6
-      .featured-card__image
-        img(src=spec.image alt="some image")
-    .col-md-6.featured-card__content
-      if spec.tag
-        p.featured-card__tag=spec.tag
-      if spec.title
-        h1.featured-card__title=spec.title
-      if spec.author
-        p.featured-card__author=spec.author
-      if spec.description 
-        p.featured-card__description=spec.description
-      if spec.link
-        +button({
-          '__type': 'anchor',
-          '__class': '',
-          '__link': spec.link,
-          '__iconAfter': 'icon-arrow-right',
-          "__text":"Read more"
-        })
-      
+    .row
+      .col-md-6
+        .featured-card__image
+          img(src=spec.image alt="some image")
+      .col-md-6.featured-card__content
+        if spec.tag
+          p.featured-card__tag=spec.tag
+        if spec.title
+          h1.featured-card__title=spec.title
+        if spec.author
+          p.featured-card__author=spec.author
+        if spec.description 
+          .featured-card__description
+            !=spec.description
+        if spec.link
+          +button({
+            '__type': 'anchor',
+            '__class': 'btn--standard',
+            '__link': spec.link,
+            '__iconAfter': 'icon-arrow-right',
+            "__text":"Read more"
+          })
+        

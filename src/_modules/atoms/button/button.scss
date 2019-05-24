@@ -197,6 +197,16 @@
         }
     }
 
+    &--red {
+        span {
+            color: $pink;
+            text-transform: none;
+            font-weight: normal;
+        }
+
+        
+    }
+
     &--fullwidth {
         width: 100%;
     }
@@ -207,10 +217,28 @@
         }
     }
 
+    &--standard {
+        border: 1px solid  $blue; 
+        padding: 20px 40px;
+        span {
+            display: inline-block;
+        }
+        .btn__text {
+            text-transform: none;
+            font-weight: normal;
+            color: black;
+        }
+        .icon {
+            font-weight: normal;
+            color: black;
+        }
+    }
+
     .icon {
 		font-size: calc-em(16, $base);
 		vertical-align: middle;
         display: inline-block;
+        padding-left: 10px;
 
 		& + span {
             margin: 3px 0px 0px 15px;

@@ -1,0 +1,30 @@
+mixin article-card(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  article.article-card(class=spec.__class)&attributes(attributes)
+    a(href="#")
+      if spec.image
+        .article-card__image
+          img(src=spec.image, alt="article image")
+      .article-card__content(class=spec.type)
+        if spec.type || spec.date
+          .article-card__details
+            if spec.type
+              p.article-card__type=spec.type
+            if spec.date
+              p.article-card__date=spec.date
+        if spec.theme
+          p.article-card__theme=spec.theme
+        if spec.title
+          h3.article-card__title=spec.title
+        if spec.author
+          p.article-card__author=spec.author
+        if spec.description
+          p.article-card__description=spec.description
+        
+
+
+          
+            
+
