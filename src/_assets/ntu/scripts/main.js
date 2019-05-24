@@ -15,6 +15,9 @@ import { bp } from '_helper';
 import SiteHeader from 'organisms/site-header/site-header';
 import HomeCarousel from 'organisms/home-carousel/home-carousel';
 import EventCarousel from 'organisms/event-carousel/event-carousel';
+import SelectInterest from 'organisms/select-interest/select-interest';
+import Excellence from 'organisms/excellence/excellence';
+
 
 $(() => {
     let _self = this;
@@ -24,6 +27,8 @@ $(() => {
     new SiteHeader();
     new HomeCarousel();
     new EventCarousel();
+    new Excellence();
+    new SelectInterest;
 
 (function($) {
 
