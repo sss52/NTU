@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a2afvf');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a2afvf#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?a2afvf') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?a2afvf') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?a2afvf##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?8vjehl');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?8vjehl#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?8vjehl') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?8vjehl') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?8vjehl##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -85,6 +85,26 @@
 .icon-instagram {
   &:before {
     content: $icon-instagram; 
+  }
+}
+.icon-arrow-up-right {
+  &:before {
+    content: $icon-arrow-up-right; 
+  }
+}
+.icon-undergraduate {
+  &:before {
+    content: $icon-undergraduate; 
+  }
+}
+.icon-graduate {
+  &:before {
+    content: $icon-graduate; 
+  }
+}
+.icon-admission {
+  &:before {
+    content: $icon-admission; 
   }
 }
 
