@@ -1,0 +1,13 @@
+mixin school-banner(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .school-banner(class=spec.__class)&attributes(attributes)
+    .school-banner__image
+      img(src=spec.image alt='banner image')
+    .school-banner__content
+      .container
+        .row
+          .col-md-12
+            .school-banner__title
+              h1=spec.title

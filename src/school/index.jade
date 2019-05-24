@@ -1,8 +1,14 @@
 extends ../_layouts/base-school
 
+
+include ../_modules/organisms/school-banner/school-banner
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p school page
+  +school-banner({
+    "image":"/assets/ntu/images/schoolbanner.jpg",
+    "title":"Lee Kong Chian School of Medicine"
+  })

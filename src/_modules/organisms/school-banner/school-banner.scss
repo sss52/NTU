@@ -1,0 +1,40 @@
+// school-banner styles
+.school-banner {
+  display: block;
+  position: relative;
+  &__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__content {
+    width: 100%;
+    display: block;
+    padding: 180px 0px;
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
+  }
+  .container {
+    .school-banner__title {
+  
+      h1 {
+        color: white;
+      }
+    }
+  }
+ 
+}
