@@ -5,6 +5,7 @@ include ../_modules/molecules/featured-card/featured-card
 
 include ../_modules/organisms/school-banner/school-banner
 include ../_modules/organisms/cta-section/cta-section
+include ../_modules/organisms/strategy-section/strategy-section
 
 block config
   //- Correct base url pathing for this page
@@ -16,14 +17,14 @@ block content
     "title":"Lee Kong Chian School of Medicine"
   })
   +cta-section()
-  .general-content
+  .general-content.general-content__bg-white
     .container
-      .row
-        +featured-card({
-          "image":"/assets/ntu/images/featureimage.jpg",
-          "tag":"Research",
-          "title":"What really goes on in our head when we act on impulse?",
-          "author":"By Ms Goh Tze Jui, Associate Prof Cai Yiyu",
-          "description":"<p>Researchers from Singapore and South Korea have uncovered new details of a brain pathway that can cause impulsive behaviours.<br>The researchers artificially activated these receptors in specific parts of the brain, and the mice displayed impulsive behaviour when the signal was picked up by the amygdala – an almond-like structure deep in the brain.</p>",
-          "link":"#"
-        })
+      +featured-card({
+        "image":"/assets/ntu/images/featureimage.jpg",
+        "tag":"Research",
+        "title":"What really goes on in our head when we act on impulse?",
+        "author":"By Ms Goh Tze Jui, Associate Prof Cai Yiyu",
+        "description":"<p>Researchers from Singapore and South Korea have uncovered new details of a brain pathway that can cause impulsive behaviours.<br>The researchers artificially activated these receptors in specific parts of the brain, and the mice displayed impulsive behaviour when the signal was picked up by the amygdala – an almond-like structure deep in the brain.</p>",
+        "link":"#"
+      })
+  +strategy-section()
