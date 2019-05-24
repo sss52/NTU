@@ -3,7 +3,11 @@
 	width: 100%;
 	font-family: $primaryfont;
 	color: $black;
-	padding: 40px 0;
+	padding: 40px 0 20px;
+
+	@include desktop {
+		padding: 40px 0;
+	}
 
 	.world-count{
 		display: block;
@@ -18,12 +22,17 @@
 	}
 
 	.count-link{
-		position: absolute;
-		right: 0;
-		top: 15px;
 		font-family: Lato;
 		font-size: calc-em(16, $base);
-		text-align: right;
+		text-align: left;
+		margin-top: 10px;
+
+		@include desktop {
+			position: absolute;
+			right: 0;
+			top: 15px;
+		}
+		
 
 		a {
 			color: $pink;
@@ -32,107 +41,115 @@
 			.icon {
 				margin-left: 10px;
 				vertical-align: middle;
+				font-size: calc-em(12, $base);
 			}
 		}
 	}
 
 	.stats {
-		display: flex;
-		padding: 40px 0 0;
+		display: block;
+		padding: 10px 0 0;
 		margin: 0;
 		list-style-type: none;
 
+		@include desktop {
+			display: flex;
+			padding: 40px 0 0;
+		}
+
 		li.column {
-			flex-grow: 1;
-			width: 25%;
-		}
-	}
-
-	.column{
-		.icon{
-			position: absolute;
-			vertical-align: top;
-			font-size: 12px;
-			transform: rotate(90deg);
-			&::before{
-				padding: 5px;
-			}
-		}
-	}
-	
-	.column {
-		padding: 10px 20px 10px 100px;
-		position: relative;
-
-		h1, h2, h3, h4, h5, h6, p, span {
-			color: $black;
-		}
-
-		.count {
-			position: absolute;
-			left: 25px;
-			top: 20px;
-			font-family: Lato;
-			font-style: normal;
-			font-weight: 900;
-			font-size: calc-em(60, $base);
-			line-height: 40px;
-			margin: 0;
-	
-			sup{
-				font-size: 14px;
-				top: -35px;
-				right: -2px;
-			}
-		}
-	
-		.numblock {
-
-			.count-text {
-				vertical-align: top;
-				font-family: Lato;
-				font-size: calc-em(16, $base);
-				line-height: 17px;
-			}
-		}
-		
-		.textblock {
 			display: inline-block;
-			vertical-align: top;
-		}
+			flex-grow: 1;
+			width: 100%;
+			padding: 20px 10px 20px 60px;
+			position: relative;
+			margin: 20px 0;
 
-		&:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 0;
-			height: 0;
-			border-top: 15px solid $black;
-			border-right: 15px solid transparent;
-		}
-
-		&.yellow {
-			&:before {
-				border-top: 15px solid $yellow;
+			@include desktop {
+				width: 25%;
+				padding: 10px 20px 10px 100px;
 			}
-		}
+
+			h1, h2, h3, h4, h5, h6, p, span {
+				color: $black;
+			}
+
+			.count {
+				position: absolute;
+				left: 15px;
+				top: 10px;
+				font-family: Lato;
+				font-style: normal;
+				font-weight: 900;
+				font-size: calc-em(40, $base);
+				line-height: 40px;
+				margin: 0;
+	
+				@include desktop {
+					left: 25px;
+					top: 20px;
+					font-size: calc-em(60, $base);
+				}
 		
-		&.purple {
-			&:before {
-				border-top: 15px solid $purple2;
+				sup {
+					font-size: 14px;
+					top: -35px;
+					right: -2px;
+				}
 			}
-		}
-
-		&.blue {
-			&:before {
-				border-top: 15px solid $blue2;
-			}
-		}
 		
-		&.green {
+			.numblock {
+	
+				.count-text {
+					vertical-align: top;
+					font-family: Lato;
+					font-size: calc-em(12, $base);
+					overflow-wrap: break-word;
+	
+					@include desktop {
+						font-size: calc-em(16, $base);
+					}
+				}
+			}
+			
+			.textblock {
+				display: inline-block;
+				vertical-align: top;
+			}
+	
 			&:before {
-				border-top: 15px solid $green;
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0;
+				height: 0;
+				border-top: 15px solid $black;
+				border-right: 15px solid transparent;
+			}
+	
+			&.yellow {
+				&:before {
+					border-top: 15px solid $yellow;
+				}
+			}
+			
+			&.purple {
+				&:before {
+					border-top: 15px solid $purple2;
+				}
+			}
+	
+			&.blue {
+				&:before {
+					border-top: 15px solid $blue2;
+				}
+			}
+			
+			&.green {
+				&:before {
+					border-top: 15px solid $green;
+				}
 			}
 		}
 	}

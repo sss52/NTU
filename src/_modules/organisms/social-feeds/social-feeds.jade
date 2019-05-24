@@ -2,38 +2,16 @@ mixin social-feeds(spec)
 	- spec = spec || {}
 	- spec.__class = spec.__class || ''
 
-		section.social-feeds
+		section.social-feeds(class=spec.__class)
 				.container
-					div(style='width: 100%;float: left;')
-						ul.grid(style="width: 50%;float: left;")
-							li.grid_item.span__1.b
-									a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-1.png);')
-										img.social-logo(src='/assets/ntu/images/social-logo.png')
-										span.social-icon-user
-											i.icon.icon-arrow-right
-										span.user-name User List
-							li.grid_item.span__1.b
-									a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-2.png);')
-										img.social-logo(src='/assets/ntu/images/social-logo.png')
-										span.social-icon-user
-											i.icon.icon-arrow-right
-										span.user-name NTU Singapore
-							li.grid_item.span__1.b
-									a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-3.png);')
-										img.social-logo(src='/assets/ntu/images/social-logo.png')
-										span.social-icon-user
-											i.icon.icon-arrow-right
-										span.user-name User List
-							li.grid_item.span__1.c
-									a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/research-2.png);')
-										img.social-logo(src='/assets/ntu/images/social-logo.png')
-										span.social-icon-user
-											i.icon.icon-arrow-right
-										span.user-name User List
-						ul.grid(style="width: 50%;height: 100%;float: left;")
-							li.grid_item.span__2.a
-								a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-1.png);')
-										img.social-logo(src='/assets/ntu/images/social-logo.png')
-										span.social-icon-user
-											i.icon.icon-arrow-right
-										span.user-name User List
+					each item in site.data.socialFeeds
+						.card-view(style="background: url("+item.image+") no-repeat center; background-size: cover;background-position: center;")
+								div.social-icon-logo
+									i.icon(class=item.icon)
+								.company
+									p.tweet-feeds= item.title
+								.user
+									.user_avatar
+										img(src=item.avatar)
+									.user_info
+										a.user_name(href='#')= item.username

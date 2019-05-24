@@ -1,13 +1,61 @@
 // social-feeds styles
-.grid_item {
-    background: #ebebeb;  
-    display: block;
-    float: left;
-    position: relative;
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    -moz-transition: all .2s cubic-bezier(.4,0,.2,1);
-    -webkit-transition: all .2s cubic-bezier(.4,0,.2,1);
-    transition: all .2s cubic-bezier(.4,0,.2,1);
+.social-feeds{
+  float:left;
+  width:100%;
+  margin-bottom: 20px;
+  .social-icon-logo{
+    text-align: right;
+    padding: 10px;
   }
+ 
+  .card-view {
+    background:#153c79;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);
+    box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);
+    float: left;
+    width: 292px;
+    padding: 15px;
+    color:#fff;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    height:270px;
+}
+
+.social-icon-logo {
+    text-align: right;
+    padding: 10px;
+    .icon{
+      color:#fff;
+    }
+}
+
+.user {
+  top: 206px;
+  .user_avatar {
+    display: table-cell;
+    vertical-align: middle;
+}
+}
+
+
+.user .user_avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.user .user_info {
+    display: table-cell;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 14px;
+    line-height: 1.4;
+    padding-left: 10px;
+    a{
+      color:#fff;
+    }
+}
+}
+  

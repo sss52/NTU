@@ -2,9 +2,9 @@
   "name": "ntu",
   "version": "0.0.1",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "dot": "^1.1.2",
     "enquire.js": "^2.1.6",
-    "fancybox": "^3.0.0",
     "gsap": "^1.19.1",
     "headroom.js": "^0.9.4",
     "jquery": "~3.1.1",
@@ -77,7 +77,6 @@
     ]
   },
   "browser": {
-    "fancybox": "./node_modules/fancybox/dist/js/jquery.fancybox.js",
     "jquery-asPieProgress": "./node_modules/jquery-asPieProgress/dist/jquery-asPieProgress.js",
     "slick-carousel": "./node_modules/slick-carousel/slick/slick.js",
     "waypoints": "./node_modules/waypoints/lib/jquery.waypoints.js",
@@ -89,10 +88,7 @@
     "masonry-layout": "./node_modules/masonry-layout/masonry.js"
   },
   "browserify-shim": {
-    "fancybox": {
-      "exports": null,
-      "depends": "jquery:jQuery"
-    }
+
   },
   "browserify-global-shim": {
     "jquery": "$",

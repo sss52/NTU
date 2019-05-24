@@ -11,6 +11,7 @@ import 'jquery-asPieProgress';
 import 'jquery-nice-select';
 import enquire from 'enquire.js';
 import { bp } from '_helper';
+import '@fancyapps/fancybox';
 
 import SiteHeader from 'organisms/site-header/site-header';
 import HomeCarousel from 'organisms/home-carousel/home-carousel';
@@ -29,6 +30,11 @@ $(() => {
     new EventCarousel();
     new Excellence();
     new SelectInterest;
+
+    if($('.facybox').length) {
+      $('.facybox').fancybox();
+    }
+
 
 (function($) {
 
