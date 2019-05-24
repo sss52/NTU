@@ -29,11 +29,80 @@ body {
 	// font-weight: $semi-bold;
     font-weight: $medium;
 	font-size: calc-em(16, $base);
-    background: #ffffff;
+    background:#E5E5E5;
 	line-height: 1.5;
 	color: $bodycolor;
 	position: relative;
     margin: 0px;
+
+
+    p {
+        font-size: calc-em(16, $base);
+        line-height: 2.0;
+        margin: 1.5em 0;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: $secondaryfont;
+        font-weight: $semi-bold;
+        color: gray;
+        margin: 0 0 20px;
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: calc-em(32, $base);
+
+        @include desktop {
+            font-size: calc-em(50, $base);
+        }
+
+        &.section-title {
+            margin: 0px;
+        }
+    }
+
+    h2 {
+        font-size: calc-em(28, $base);
+
+        @include mobile {
+            font-size: calc-em(25, $base);
+        }
+    }
+
+    h3 {
+        font-size: calc-em(25, $base);
+
+        @include tablet {
+            font-size: calc-em(20, $base);
+        }
+        @include mobile {
+            font-size: calc-em(18, $base);
+        }
+    }
+
+    h4 {
+        font-size: calc-em(18, $base);
+        @include mobile {
+            font-size: calc-em(18, $base);
+        }
+    }
+
+    h5 {
+        font-size: calc-em(16, $base);
+
+        @include mobile {
+            font-size: calc-em(16, $base);
+        }
+    }
+
+    h6 {
+        font-size: calc-em(14, $base);
+
+        @include mobile {
+            font-size: calc-em(14, $base);
+        }
+    }
     
     .container {
         position: relative;
@@ -149,73 +218,7 @@ body {
             }
         }
 
-        p {
-            font-size: calc-em(16, $base);
-            line-height: 2.0;
-            margin: 1.5em 0;
-        }
 
-        h1, h2, h3, h4, h5 {
-            font-family: $secondaryfont;
-            font-weight: $semi-bold;
-            color: gray;
-            margin: 0 0 20px;
-            line-height: 1.5;
-        }
-
-        h1 {
-            font-size: calc-em(32, $base);
-
-            @include desktop {
-                font-size: calc-em(50, $base);
-            }
-
-            &.section-title {
-                margin: 0px;
-            }
-        }
-
-        h2 {
-            font-size: calc-em(28, $base);
-
-            @include mobile {
-                font-size: calc-em(25, $base);
-            }
-        }
-
-        h3 {
-            font-size: calc-em(25, $base);
-
-            @include tablet {
-                font-size: calc-em(20, $base);
-            }
-            @include mobile {
-                font-size: calc-em(18, $base);
-            }
-        }
-
-        h4 {
-            font-size: calc-em(18, $base);
-            @include mobile {
-                font-size: calc-em(18, $base);
-            }
-        }
-
-        h5 {
-            font-size: calc-em(16, $base);
-
-            @include mobile {
-                font-size: calc-em(16, $base);
-            }
-        }
-
-        h6 {
-            font-size: calc-em(14, $base);
-
-            @include mobile {
-                font-size: calc-em(14, $base);
-            }
-        }
 
         .section-title {
             margin: 0px;
@@ -293,6 +296,9 @@ body {
 
 .general-content {
     padding: 30px 0px;
+    &__bg-white {
+        background-color: white;
+    }
 }
 
 

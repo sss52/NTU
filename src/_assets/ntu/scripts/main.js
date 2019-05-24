@@ -49,8 +49,11 @@ $(() => {
         "type": "search",
         "placeholder": 'What interests you?'
       });
-  
-      $(header).append(input).appendTo(header);
+      var icon =  $("<i>").attr({
+        "class": "icon icon-search"
+      });
+
+      $(header).append(input).append(icon).appendTo(header);
   
       $(input)
         .change(function() {
