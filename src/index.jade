@@ -4,6 +4,7 @@ include _modules/organisms/home-carousel/home-carousel
 include _modules/organisms/event-carousel/event-carousel
 include _modules/organisms/select-interest/select-interest
 include _modules/organisms/excellence/excellence
+include _modules/organisms/social-feeds/social-feeds
 
 block content
 	+home-carousel()
@@ -33,39 +34,4 @@ block content
 
 	+event-carousel()
 
-	
-	.research-section
-		.container 
-			div(style='width: 100%;float: left;')
-				ul.grid(style="width: 50%;float: left;")
-					li.grid_item.span__1.b
-							a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-1.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name User List  
-					li.grid_item.span__1.b
-							a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-2.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name NTU Singapore 
-					li.grid_item.span__1.b
-							a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-3.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name User List 
-					li.grid_item.span__1.c
-							a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/research-2.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name User List 
-				ul.grid(style="width: 50%;height: 100%;float: left;")
-					li.grid_item.span__2.a
-						a.metrostyle.orgmetro(style='background-repeat: no-repeat, repeat;background-position: center;height: 180px;cursor: pointer;background:url(/assets/ntu/images/social-1.png);')
-								img.social-logo(src='/assets/ntu/images/social-logo.png')
-								span.social-icon-user
-									i.icon.icon-arrow-right
-								span.user-name User List 
+	+social-feeds()
