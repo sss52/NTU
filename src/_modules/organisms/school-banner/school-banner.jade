@@ -32,9 +32,8 @@ mixin school-banner(spec)
 						each item, index in spec.news
 							.news-box
 								.news-box__cat
-									span
-										=item.category
-										=item.date
+									span.cat-title=item.category
+									span.cat-date=item.date
 								.news-box__title
 									a(href=item.link)
 										span=item.title

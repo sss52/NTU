@@ -55,6 +55,35 @@
 						width: 20%;
 						padding: 20px;
 						background: $white;
+
+						&__cat {
+							font-size: calc-em(13, $base);
+							margin: 0px 0px 10px;
+
+							.cat {
+								&-title {
+									position: relative;
+
+									&:after {
+										content: '__';
+										position: relative;
+										margin: 0px 5px;
+										top: -6px;
+									}
+								}
+							}
+						}
+
+						&__title {
+							line-height: 1.1;
+
+							span {
+								font-size: calc-em(14, $base);
+								font-weight: $bold;
+								line-height: 1;
+								color: $black;
+							}
+						}
 					}
 				}
 			}
