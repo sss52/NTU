@@ -155,5 +155,10 @@ let checkCookie = function(cookiename) {
 	}
 }
 
+let pad = function(str, max) {
+	str = str.toString();
+	return str.length < max ? pad("0" + str, max) : str;
+}
 
-export { bp, timing, debounce, detectIE, textAreaAdjust, textInputAdjust, variableFontSize, setCookie, checkCookie, iOS};
+
+export { bp, timing, debounce, detectIE, textAreaAdjust, textInputAdjust, variableFontSize, setCookie, checkCookie, iOS, pad};

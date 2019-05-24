@@ -1,3 +1,5 @@
+include ../../atoms/button/button
+
 mixin home-carousel(spec)
 	- spec = spec || {}
 	- spec.__class = spec.__class || ''
@@ -7,32 +9,17 @@ mixin home-carousel(spec)
 	section.home-carousel(class=spec.__class)
 		.home-carousel__slick
 			each item in site.data.homeCarousel
-				.slick-wrapper
+				.slick-wrapper(data-cat=item.category)
 					.slick-text
 						.container
-							.slick-text__category
-								span=item.category
-							.slick-text__title
-								span 
-									a(href=item.link)=item.title
+							.text-container
+								h2.title= item.title
+								+button({
+									'__class': 'cta',
+									'__text': 'See research',
+									'__link': '#',
+									'__iconAfter': 'icon-arrow-up-right'
+								})
+
 					.slick-image
 						img(src=item.image)
-
-		.home-carousel__arrows
-			.container
-				.carousel-arrows__wrap
-					#progress.progress(role="progressbar" data-goal="100" aria-valuemin="0" aria-valuemax="100")
-						.thumb-carousel__slick
-							each item in site.data.homeCarousel
-								.slick-image
-									img(src=item.image)
-					.progress-arrows
-						.icon.prev.icon-arrow-left
-						.icon.next.icon-arrow-right
-							span Next
-		.home-carousel__tab
-			.pagination__page
-					each item in spec.carousel
-							button.btnTab=item.title
-								span=item.category
-								span=item.number
