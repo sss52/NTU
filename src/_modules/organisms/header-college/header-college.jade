@@ -7,37 +7,64 @@ mixin header-college(spec)
 
 	header.main-header.ntu-college
 		.top-bar
-			.topbar-logo
-				img(src='')
-			.topbar-link
+			.topbar-wrap
+				.topbar-logo
+					img(src='')
+			.topbar-wrap
+				.topbar-link
+					ul
+						li
+							+input-select({
+								'__options': ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+								'__display': 'Information for...',
+								'__class': 'topbar-select'
+							})
+						li
+							+input-select({
+								'__options': ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+								'__display': 'Logins',
+								'__class': 'topbar-select'
+							})
+						li
+							a(href='/') Media
+						li
+							+input-select({
+								'__options': ['Facebook', 'Twitter', 'Instagram'],
+								'__display': 'Social Media',
+								'__class': 'topbar-select'
+							})
+				.topbar-api
+					ul
+						li
+							+button({
+								'__type': 'anchor',
+								'__class': 'btn--noborder',
+								'__link': '/',
+								'__iconBefore': 'icon-phone'
+							})
+						li
+							+button({
+								'__type': 'anchor',
+								'__class': 'btn--noborder',
+								'__link': '/',
+								'__iconBefore': 'icon-search'
+							})
+		
+		.nav-menu__wrap
+			.nav-title
+				h2 College of Humanities, Arts, and Social
+			
+			.nav-menu
 				ul
 					li
-						+input-select({
-							'__options': ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
-							'__display': 'Information for...',
-							'__class': 'topbar-select'
-						})
+						a(href="#", class="nav__item") 
+							| About CHASS
+					li      
+						a(href="#", class="nav__item")
+							| Programmes
 					li
-						+input-select({
-							'__options': ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
-							'__display': 'Logins',
-							'__class': 'topbar-select'
-						})
+						a(href="#", class="nav__item")
+							| News & Events
 					li
-						a(href='/') Media
-					li
-						+input-select({
-							'__options': ['Facebook', 'Twitter', 'Instagram'],
-							'__display': 'Social Media',
-							'__class': 'topbar-select'
-						})
-			.topbar-api
-				ul
-					li
-						+button({
-							'__type': 'anchor',
-							'__class': 'btn-noborder',
-							'__link': '/',
-							'__iconBefore': 'icon-ntu-logo'
-						})
-
+						a(href="#", class="nav__item")
+							| Contact Us
