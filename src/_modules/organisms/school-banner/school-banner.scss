@@ -53,7 +53,7 @@
 
 					&-box {
 						width: 20%;
-						padding: 20px;
+						padding: 25px;
 						background: $white;
 
 						&__cat {
@@ -78,7 +78,7 @@
 							line-height: 1.1;
 
 							span {
-								font-size: calc-em(14, $base);
+								font-size: calc-em(15, $base);
 								font-weight: $bold;
 								line-height: 1;
 								color: $black;

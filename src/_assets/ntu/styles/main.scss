@@ -3,7 +3,9 @@
 @import 'node_modules/normalize.css/normalize';
 @import 'node_modules/slick-carousel/slick/slick.scss';
 @import 'node_modules/jquery-nice-select/scss/nice-select';
+@import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
 
+@import './_fancybox';
 @import './_vars';
 @import './_fonts';
 @import './_mixins';
@@ -294,8 +296,22 @@ body {
 
 .general-content {
     padding: 60px 0px;
+    position: relative;
     &__bg-white {
         background-color: white;
+    }
+    &__with-purple-box {
+        padding: 120px 0px 90px 0px;
+        &::after {
+            content: "";
+            display: block;
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 80px;
+            height: 50%;
+            background-color: $purple;
+        }
     }
 }
 
@@ -311,6 +327,7 @@ body {
 @import '../_modules/molecules/article-card/article-card';
 @import '../_modules/molecules/two-column-image-text/two-column-image-text';
 @import '../_modules/molecules/rte/rte';
+@import '../_modules/molecules/video-box/video-box';
 
 
 @import '../_modules/organisms/site-header/site-header';

@@ -67,7 +67,13 @@ mixin header(spec)
 			.logo
 				img(src="/assets/ntu/images/ntu-logo.png", alt="*NTU", height="100px", width="100px")
 			.search
-				input(type='text', placeholder='Search..')
+				input(type='text', placeholder='Search for something..')
+				+button({
+								'__type': 'anchor',
+								'__class': 'btn--noborder',
+								'__link': '/',
+								'__iconBefore': 'icon-search'
+							})
 
 		.nav-menu
 			ul
