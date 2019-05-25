@@ -229,18 +229,55 @@ header {
 		justify-content: space-evenly;
 		flex-wrap: nowrap;
 		align-content: stretch;
+		&.top-bar{
+			background:#f4f4f4;
+			padding: 30px 25px;
+			.topbar-wrap:nth-child(2) {
+				justify-content: center;
+			}
+			.topbar-wrap:nth-child(3) {
+				justify-content: flex-end;
+			}
+			.main-logo{
+				display: block;
+				width: 148px;
+				height: 54px;
+				margin: 0 auto;
+			}
+			.filterinput{
+				width: 100%;
+				border: 1px solid #ADADAD;
+				padding: 10px;
+				border-radius: 36px;
+			
+			}
+			.icon-search{
+				position: absolute;
+				right: 36px;
+				top: 13px;
+				color: #000;
+				transform: rotate(90deg);
+			}
+		}
+		
+		.contact-main{
+			position: absolute;
+			top: 3px;
+			left: 68px;
+			color: #000;
+		}
 	.icon-phone{
-		position: absolute;
-			left: 50px;
-			top: 60px;
 			font-size: 24px;
 			background: red;
     padding: 10px;
     border-radius: 50%;
-    color: #fff;
-
+		color: #fff;
 		}
-
+		.contact-main{
+			span{
+				display:block
+			}
+		}
   }
 
   .left-align {

@@ -60,23 +60,23 @@ mixin header(spec)
 										'__link': '/',
 										'__iconBefore': 'icon-instagram'
 									})
-		.container
-			.nav-bar
-				.left-align
-					i.icon.icon-phone
-					span Contact us
-					span.phone-number (65) 6791 1744
-				.logo
-					img(src="/assets/ntu/images/ntu-logo.png", alt="*NTU", height="100px", width="100px")
-				.search
-					input(type='text', placeholder='Search for something..')
-					+button({
-									'__type': 'anchor',
-									'__class': 'btn--noborder',
-									'__link': '/',
-									'__iconBefore': 'icon-search'
-								})
-
+		
+		.nav-bar.top-bar
+			.container
+				.top-bar-nav
+					.topbar-wrap
+						.topbar-link
+							i.icon.icon-phone
+							.contact-main
+								span Contact us
+								span.phone-number (65) 6791 1744
+					.topbar-wrap
+						.topbar-link
+							img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
+					.topbar-wrap
+						.topbar-link
+							input.filterinput(type='search', placeholder='What interests you?')
+							i.icon.icon-search
 		.nav-menu
 			ul
 				li
