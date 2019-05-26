@@ -79,6 +79,9 @@ mixin header(spec)
 							i.icon.icon-search
 		.nav-menu
 			ul
+				li.sticky-logo
+					a(href="#", class="nav__item")
+						img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
 				li
 					a(href="#", class="nav__item")
 						| About NTU
@@ -97,3 +100,9 @@ mixin header(spec)
 				li
 					a(href="#", class="nav__item")
 						| Campus Life
+				li.sticky-phone
+					a(href="#", class="nav__item")
+						i.icon.icon-phone
+				li.sticky-search
+					a(href="#", class="nav__item")
+						i.icon.icon-search

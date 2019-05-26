@@ -7,12 +7,50 @@ header {
 		transition: all .4s linear;
 		z-index: 10;
 		background:#F4F4F4;
-
+		.sticky-logo{
+			display:none;
+		}
+		.sticky-phone{
+			display:none;
+		}
+		.sticky-search{
+			display:none;
+		}
 		&.headroom--not-top {
 			position: fixed;
 			background:#F4F4F4;
 			padding:0px;
 
+			.sticky-logo{
+				display:inline-block;
+				a{
+					padding: 15px 0 2px 0;
+					img{
+						width:100px;
+					}
+				}
+			
+			}
+			.sticky-phone{
+				display:inline-block;
+				.icon-phone{
+					background: red;
+					padding: 10px;
+					border-radius: 50%;
+					color: #fff;
+				}
+			}
+			.sticky-search{
+				display:inline-block;
+				.icon-search{
+					font-size: 1.2em;
+				}
+			}
+			.nav-bar{
+&.top-bar{
+	display: none;
+}
+			}
 			.nav-main__item {
 				@include desktop {
 					&:after {
@@ -64,6 +102,7 @@ header {
 					}
 				}
 			}
+			
 		}
 
 
