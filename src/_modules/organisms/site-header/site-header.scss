@@ -160,9 +160,6 @@ header {
 						}
 					}
 				}
-				.icon{
-					font-size:1.4em;
-				}
 			}
 			&-select{
 				BACKGROUND: transparent;
@@ -288,6 +285,7 @@ header {
 				border: 1px solid #ADADAD;
 				padding: 10px;
 				border-radius: 36px;
+
 			
 			}
 			.icon-search{
@@ -296,6 +294,7 @@ header {
 				top: 13px;
 				color: #000;
 				transform: rotate(90deg);
+				font-size:1.4em;
 			}
 		}
 		
