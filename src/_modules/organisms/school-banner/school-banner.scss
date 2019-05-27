@@ -1,0 +1,201 @@
+// school-banner styles
+.school-banner {
+	display: block;
+	position: relative;
+	&__image {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 0;
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__content {
+		width: 100%;
+		display: block;
+		padding: 180px 0px;
+		&::before {
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0.4);
+		}
+	}
+	.container {
+		.school-banner__title {
+	
+			h1 {
+				color: white;
+			}
+		}
+	}
+
+	&.banner-news {
+		.bar {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			opacity: 0.65;
+			z-index: 2;
+			overflow: hidden;
+
+			&.yellow {
+				.bar-1, .bar-2, .bar-3, .bar-4 {
+					background: $yellow2;
+				}
+			}
+
+			&.blue {
+				.bar-1, .bar-2, .bar-3, .bar-4 {
+					background: $blue2;
+				}
+			}
+
+			&-1,
+			&-2 {
+				display: block;
+				height: 12px;
+				width: 20%;
+				right: 0;
+				position: absolute;
+			}
+
+			&-1 {
+				right: 35px;
+				top: 80px;
+			}
+
+			&-2 {
+				right: 5px;
+				top: 80px;
+			}
+
+			&-3 {
+				display: block;
+				height: 200px;
+				width: 50%;
+				right: -290px;
+				top: 215px;
+				position: absolute;
+			}
+
+			&-4 {
+				display: block;
+				height: 50px;
+				width: 50%;
+				right: -425px;
+				top: 375px;
+				position: absolute;
+			}
+
+			&-1, &-2, &-3, &-4 {
+				transform: rotate(-60deg) skew(30deg);
+			}
+		}
+
+		.school-banner {
+			&__image {
+				// overflow: hidden;
+
+				// &:before {
+				// 	content: '';
+				// 	display: block;
+				// 	position: absolute;
+				// 	background: url('/assets/ntu/images/banner-bar.svg') no-repeat;
+				// 	width: 30%;
+				// 	height: 100%;
+				// 	right: -45px;
+				// }
+			}
+
+			&__content {
+				.news {
+					&-wrap {
+						width: 100%;
+						position: absolute;
+						bottom: 0;
+
+						.container {
+							display: flex;
+						}
+					}
+
+					&-box {
+						width: 20%;
+						padding: 25px;
+						background: $white;
+
+						&__cat {
+							font-size: calc-em(13, $base);
+							margin: 0px 0px 10px;
+
+							.cat {
+								&-title {
+									position: relative;
+
+									&:after {
+										content: '__';
+										position: relative;
+										margin: 0px 5px;
+										top: -6px;
+									}
+								}
+							}
+						}
+
+						&__title {
+							line-height: 1.1;
+
+							span {
+								font-size: calc-em(15, $base);
+								font-weight: $bold;
+								line-height: 1;
+								color: $black;
+							}
+						}
+					}
+				}
+			}
+
+			&__title {
+				width: 50%;
+
+				h1 {
+					font-size: calc-em(36, $base);
+				}
+			}
+
+			&__subtitle {
+				width: 50%;
+
+				p {
+					color: $white;
+					font-size: calc-em(15, $base);
+					line-height: 1.5;
+				}
+			}
+		}
+
+		.btn {
+			padding: 20px 25px;
+			text-transform: none;
+			font-size: calc-em(18, $base);
+			font-weight: $normal;
+			color: $white;
+			border: 1px solid $white;
+
+			span {
+				vertical-align: initial;
+			}
+		}
+	}
+}

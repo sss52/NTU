@@ -1,0 +1,13 @@
+// news-carousel styles
+.news-carousel {
+  @extend %clearfix;
+  // .carousel-slider {
+  //   float: left;
+  // }
+  .slick-list {
+    overflow: visible !important;
+  }
+  .slide {
+    padding: 0px 40px 0px 0px;
+  }
+}

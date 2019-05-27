@@ -1,0 +1,67 @@
+// rte styles
+.rte {
+	@extend %clearfix;
+	padding-bottom: 10px;
+
+	*:first-child {
+		margin-top: 0;
+	}
+
+	a {
+		color: $pink;
+		text-decoration: none;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+
+	table {
+		border: 1px solid $bodycolor;
+		border-collapse: collapse;
+
+		tr {
+			border-bottom: 1px solid $bodycolor;
+		}
+
+		th, td {
+			padding: 5px 10px;
+		}
+
+		th {
+			background: $bodycolor;
+		}
+	}
+
+	h1, h2, h3, h4, h5 {
+		color: $black;
+		margin: 10px 0;
+	}
+
+	.aligncenter {
+		display: block;
+		margin: auto;
+	}
+
+	.alignleft {
+		float: left;
+		margin-right: 10px;
+	}
+
+	.alignright {
+		float: right;
+		margin-left: 10px;
+	}
+	
+	ul {
+		padding-left: 1em;
+		
+		li {
+			padding: 8px 0;
+		}
+	}
+
+	// p {
+	// 	line-height: calc-em(24px, $base);
+	// }
+}

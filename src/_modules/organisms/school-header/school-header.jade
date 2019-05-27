@@ -1,0 +1,99 @@
+mixin school-header(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  header.school-header(class=spec.__class)&attributes(attributes)
+    nav.secondary-nav.main-nav
+      .container
+        .row
+          .nav-wrapper
+            .main-nav__logo
+              img(src="/assets/ntu/images/ntu-logo-white.svg", alt="ntu logo")
+            .main-nav__links
+              ul
+                each item in site.data.schoolNav.secondary
+                  li.lvl1item
+                    a(href=item.link)
+                      span=item.name
+                    if item.lvl2nav
+                      button.lvl2-handle
+                        i.icon.icon-arrow-down
+            .main-nav__api
+              ul
+                li
+                  +button({
+                    '__type': 'anchor',
+                    '__class': 'btn--noborder',
+                    '__link': '/',
+                    '__iconBefore': 'icon-phone'
+                  })
+                li
+                  +button({
+                    '__type': 'anchor',
+                    '__class': 'btn--noborder',
+                    '__link': '/',
+                    '__iconBefore': 'icon-search'
+                  })
+    nav.primary-nav.main-nav
+      .container  
+        .row
+          .nav-wrapper
+            .main-nav__logo
+              img(src="/assets/ntu/images/LKC Logo.svg", alt="LKC logo")
+            .main-nav__links
+              ul
+                each item in site.data.schoolNav.primary 
+                  li
+                    a(href=item.link)
+                      span=item.name
+
+
+mixin college-header(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  header.school-header(class=spec.__class)&attributes(attributes)
+    nav.secondary-nav.main-nav
+      .container
+        .row
+          .nav-wrapper
+            .main-nav__logo
+              img(src="/assets/ntu/images/ntu-logo-white.svg", alt="ntu logo")
+            .main-nav__links
+              ul
+                each item in site.data.schoolNav.secondary
+                  li.lvl1item
+                    a(href=item.link)
+                      span=item.name
+                    if item.lvl2nav
+                      button.lvl2-handle
+                        i.icon.icon-arrow-down
+            .main-nav__api
+              ul
+                li
+                  +button({
+                    '__type': 'anchor',
+                    '__class': 'btn--noborder',
+                    '__link': '/',
+                    '__iconBefore': 'icon-phone'
+                  })
+                li
+                  +button({
+                    '__type': 'anchor',
+                    '__class': 'btn--noborder',
+                    '__link': '/',
+                    '__iconBefore': 'icon-search'
+                  })
+    nav.primary-nav.main-nav
+      .container  
+        .row
+          .nav-wrapper
+            .main-nav__logo
+              h3 College of Humanities, Arts, and Social Sciences
+            .main-nav__links
+              ul
+                each item in site.data.collegeNav.primary 
+                  li
+                    a(href=item.link)
+                      span=item.name
+        

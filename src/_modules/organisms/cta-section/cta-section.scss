@@ -1,0 +1,22 @@
+// cta-section styles
+.cta-section {
+	padding: 30px 0px;
+	background: $white;
+
+	.btn {
+		padding: 15px 30px;
+
+		&.ntu-college {
+			&:after {
+				border-left: 7px solid $yellow2;
+				border-right: 7px solid transparent;
+				border-bottom: 7px solid transparent;
+				border-top: 7px solid $yellow2;
+			}
+
+			.icon {
+				font-size: calc-em(40, $base);
+			}
+		}
+	}
+}

@@ -1,0 +1,138 @@
+// school-header styles
+.school-header {
+  &.headroom--not-top{
+    position: fixed;
+    padding: 0px;
+    width: 100%;
+    z-index: 10;
+  }
+  border-bottom: 1px solid #f2f2f2  ;
+  .main-nav {
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__logo {
+      padding: 15px 0px;
+      img {
+        width: 150px;
+        height: auto;
+        display: block;
+      } 
+    }
+    &__links {
+      width: 100%;
+      
+      ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        li {
+          display: block;
+          position: relative;
+          padding: 0px 10px;
+          .lvl2-handle {
+            display: block;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: calc(50% - 10px);
+            .icon {
+              color: white;
+              font-size: 10px;
+            }
+          }
+          a {
+            padding: 15px 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transform: translateX(-110%);
+              width: 100%;
+              height: 3px;
+              background-color: white;
+              transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+            span {
+              font-size: calc-em(15, $base);
+            }
+            &:hover {
+              &::after {
+                transform: translateX(0);
+              }
+            }
+          }
+        }
+      }
+    }
+    &__api {
+      ul {
+        list-style-type: none;
+        display: flex;
+        margin-top: 29px;
+        li {
+          padding: 0px 10px
+        }
+        .icon {
+
+          color: white;
+          font-size: calc-em(24, $base);
+        }
+      }
+    }
+    &.primary-nav {
+      .main-nav__links {
+        width: 100%;
+
+        ul {
+          justify-content: space-around;
+          width: 100%;
+          li {
+            a {
+              color: black;
+              &::after {
+                background-color: $blue;
+              }
+              span {
+                font-size: calc-em(16, $base);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .secondary-nav {
+    background-color: $blue;
+  }
+  .primary-nav {
+    background-color: white;
+  }
+
+  &.college {
+    .primary-nav {
+      .main-nav__logo {
+        width: auto;
+        h3 {
+          margin: 0px;
+          font-size: calc-em(25, $base);
+        }
+      }
+      
+      .main-nav__links {
+        width: auto !important;
+      }
+    }
+  }
+}
+

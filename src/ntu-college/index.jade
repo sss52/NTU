@@ -1,0 +1,156 @@
+extends ../_layouts/ntu_college
+
+include ../_modules/organisms/school-banner/school-banner
+include ../_modules/organisms/cta-section/cta-section
+include ../_modules/molecules/article-card/article-card
+
+block config
+	//- Correct base url pathing for this page
+	- var baseUrl = '../'
+
+block content
+	+school-banner({
+		"image":"/assets/ntu/images/NTU_GlobalDigitalArt.jpg",
+		"bar": true,
+		"barcolour": "yellow",
+		"class":"banner-news",
+		"title":"NTU Global Digital Art Prize 2019: Fourth Industrial Revolutions",
+		"subtitle":"Taking the form of a biennial competition, it recognises global artists and technologists with extraordinary creativity in digitally mediated art, design and cultural heritage",
+		"link":"/",
+		"news": [
+			{
+				"category":"News",
+				"date":"8 April 2019",
+				"title":"Deadline extended for NTU Global Digital Art Prize 2019!",
+				"link":"/"
+			},
+			{
+				"category":"News",
+				"date":"1 April 2019",
+				"title":"ADM - Quiet Dream series deals with marriage migration issues",
+				"link":"/"
+			},
+			{
+				"category":"News",
+				"date":"25 April 2019",
+				"title":'SoH Faculty (English) published in volume of essays "Narrating Death"',
+				"link":"/"
+			}
+		]
+	})
+
+	+cta-section-opt({
+		'buttons': [
+			{
+				'btnclass': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme  ntu-college',
+				'text': 'Undergraduate Programmes',
+				'link': '/',
+				'icon': 'icon-undergraduate'
+			},
+			{
+				'btnclass': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme ntu-college',
+				'text': 'Graduate Programmes',
+				'link': '/',
+				'icon': 'icon-graduate'
+			},
+			{
+				'btnclass': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme ntu-college',
+				'text': 'Admission',
+				'link': '/',
+				'icon': 'icon-admission'
+			}
+		]
+	})
+
+	section.footprint
+		.container
+			h2 Our global footprints
+
+			.footprint-wrap
+				.footprint-banner
+					.footprint-img
+						img(src='/assets/ntu/images/ntu_singapore7.png')
+					.footprint-logo
+						img(src='/assets/ntu/images/World-University-Rankings-R-logo.png')
+					.footprint-desc
+						h3.desc-title ADM amongst the Top 50 schools of Art Design in the world
+						span.desc-sub QS World Ranking 2019 based on subjects has placed NTU's Art & Design programme at 30th. ADM has climbed 10 ranks from last year's 40th place.
+				.footprint-list
+					.list-video
+						a.fancybox.play-btn(data-fancybox href="https://www.youtube.com/watch?v=3PncCw5b6Ns")
+							.list-play
+								i.icon.icon-play3
+								span Your journey starts here
+							img(src='/assets/ntu/images/footprint-video.png')
+					.list-items
+						.list-title QS World University Rankings by Subjects 2019
+						p 4 of our subjects are ranked Top 50
+					.list-items
+						.list-title Industry Award for Best Infographic at Raw Science Film Festival 2019
+						p The short movie won the "Industry Award for Best Infographic".
+			
+			.footprint-rank
+				.rank-wrap
+					.rank-number
+						span.place 8
+						span.suffix th
+					.rank-title
+						span Communications & Media Studies in the world
+				
+				.rank-wrap
+					.rank-number
+						span.place 1
+						span.suffix st
+					.rank-title
+						span Library & Information Management in Asia
+				
+				.rank-wrap
+					.rank-number
+						span.place 19
+						span.suffix th
+					.rank-title
+						span Social Sciences in the world
+				
+				.rank-wrap
+					.rank-number
+						span.place 40
+						span.suffix th
+					.rank-title
+						span Psychology in the world
+
+
+	section.events
+		.container
+			h2 Events
+			.row
+				.col-md-3
+					+article-card({
+						"image":"/assets/ntu/images/event1.png",
+						"title":"NTU and UPMC-Sorbonne Universities Joint Workshops",
+						"type":"Events",
+						"date":"2 -4 June 2019",
+					})
+
+				.col-md-3
+					+article-card({
+						"image":"/assets/ntu/images/event2.png",
+						"title":"Economic Seminar | Labor market rigidity and employment",
+						"type":"Events",
+						"date":"17 April 2019",
+					})
+
+				.col-md-3
+					+article-card({
+						"image":"/assets/ntu/images/event3.png",
+						"title":"Psychology Seminar | Simple model systems provide insight into mechanisms",
+						"type":"Events",
+						"date":"17 April 2019",
+					})
+
+				.col-md-3
+					+article-card({
+						"image":"/assets/ntu/images/event4.png",
+						"title":"Economics Seminar | Quantile Treatment Effects and Bootstrap Inference",
+						"type":"Events",
+						"date":"5 April 2019",
+					})

@@ -1,0 +1,72 @@
+// header-college styles
+.main-header {
+    &.ntu-college {
+			&.headroom--not-top{
+				position: fixed;
+				padding: 0px;
+				width: 100%;
+				z-index: 10;
+			}
+		.top-bar {
+			display: flex;
+			height: 44px;
+			padding: 5px 35px;
+
+			span {
+				margin: 0;
+			}
+
+			.topbar {
+				&-wrap {
+					display: flex;
+					width: 50%;
+					align-items: center;
+
+					&:nth-child(2) {
+						justify-content: flex-end;
+					}
+				}
+
+				&-link,
+				&-api {
+					ul {
+						display: flex;
+						list-style-type: none;
+
+						li {
+							margin: 0px 1em;
+							color: $white;
+
+							a {
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.nav {
+			&-menu__wrap {
+				display: flex;
+				align-items: center;
+				padding: 0px 35px;
+			}
+
+			&-title {
+				width: auto;
+			}
+
+			&-menu {
+				border: none;
+				display: flex;
+				width: auto;
+				justify-content: flex-start;
+
+				ul {
+					text-align: left;
+				}
+			}
+		}
+	}
+}

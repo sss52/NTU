@@ -1,0 +1,34 @@
+mixin excellence(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	section.excellence
+		.container
+			.world-count
+				h2.section-title NTU’s numbers in the world
+				
+				ul.stats
+					li.column.yellow
+						.numblock
+							h2.count 3<sup>rd</sup>
+						.textblock
+							span.count-text Materials Science
+					li.column.purple
+						.numblock
+							h2.count 6<sup>th</sup>
+						.textblock
+							span.count-text Electrical &amp; Electronic Engineering
+					li.column.blue
+						.numblock
+							h2.count 8<sup>th</sup>
+						.textblock
+							span.count-text Communications  &amp; Media Studies
+					li.column.green
+						.numblock
+							h2.count 9<sup>th</sup>
+						.textblock
+							span.count-text Chemistry
+
+				.count-link
+					a(href="#") See NTU’s excellence
+						i.icon.icon-arrow-right

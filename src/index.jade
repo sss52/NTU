@@ -1,5 +1,6 @@
 extends _layouts/base
 
+include _modules/molecules/two-column-image-text/two-column-image-text
 include _modules/organisms/home-carousel/home-carousel
 include _modules/organisms/event-carousel/event-carousel
 include _modules/organisms/select-interest/select-interest
@@ -10,6 +11,7 @@ include _modules/organisms/research/research
 block content
 	+home-carousel()
 
+<<<<<<< HEAD
 	+select-interest()
 
 	+excellence()
@@ -37,3 +39,39 @@ block content
 			img.dw-pnl__cntnt(src='https://unsplash.it/445/?random')
 		.dw-pnl
 			img.dw-pnl__cntnt(src='https://unsplash.it/423/?random')
+=======
+	+excellence()
+
+	+select-interest()
+
+	.clearfix
+
+	+two-column-image-text({
+		'__class': 'centered',
+		'__image': '/assets/ntu/images/research-2-2x.jpg',
+		'__cat': 'Research'
+	})
+		h3 Agilent Technologies and Nanyang Technological University collaborate on wastewater treatment research
+		p Scientists and engineers from NEWRI aim to gain a better understanding of microbes capable of degrading various materials so as to harness them for wastewater and waste treatment.
+
+		+button({
+			'__text': 'See research',
+			'__iconAfter': 'icon-arrow-right'
+		})
+
+	+two-column-image-text({
+		'__class': 'style-2 reversed',
+		'__image': '/assets/ntu/images/research-1.png'
+	})
+		h3 Singapore President and NTU new Chancellor ​Halimah Yacob made her first visit to the campus
+		p During a tour of NTU’s latest facilities, including the new residential halls at North Hill and Nanyang Crescent, President Halimah got a close-up look at the university's Residential Education programme, which offers a variety of learning activities hosted by the halls of residence for student residents.
+
+		+button({
+			'__text': 'See all releases',
+			'__iconAfter': 'icon-arrow-right'
+		})
+
+	+event-carousel()
+
+	+social-feeds()
+>>>>>>> 56fe17b0313e28b0ec825f93e7fcdc99984ba173

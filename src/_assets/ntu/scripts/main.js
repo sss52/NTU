@@ -11,10 +11,16 @@ import 'jquery-asPieProgress';
 import 'jquery-nice-select';
 import enquire from 'enquire.js';
 import { bp } from '_helper';
+import '@fancyapps/fancybox';
 
 import SiteHeader from 'organisms/site-header/site-header';
 import HomeCarousel from 'organisms/home-carousel/home-carousel';
 import EventCarousel from 'organisms/event-carousel/event-carousel';
+import SelectInterest from 'organisms/select-interest/select-interest';
+import Excellence from 'organisms/excellence/excellence';
+import NewsCarousel from 'molecules/news-carousel/news-carousel';
+
+
 
 $(() => {
     let _self = this;
@@ -24,6 +30,52 @@ $(() => {
     new SiteHeader();
     new HomeCarousel();
     new EventCarousel();
+    new Excellence();
+    new SelectInterest;
+
+    if($('.news-carousel').length) {
+      new NewsCarousel();
+    }
+
+    if($('.facybox').length) {
+      $('.facybox').fancybox();
+    }
+
+
+
+
+  //  $("#search-site").on("keyup", function() {
+  //     var v = $(this).val();
+  //     $(".results").removeClass("results");
+  //      $(".noresults").removeClass("noresults");
+  //     $(".main").each(function() {
+  //       if (v != "" && $(this).text().search(new RegExp(v, 'gi')) != -1) {
+  //         $(this).addClass("results");
+  //        } else if (v != "" && $(this).text().search(v) != 1) {
+  //        $(this).addClass("noresults");
+  //       }
+  //     });
+  //    });
+
+    //  $('#search-site').fullsearch({
+
+    //     highlight: true,   
+    //  search_data: ".search-result",
+    //    search_title: ".result-section",
+    //     search_content: ".result-content",
+    //    list: "#main",
+    //     nodata: "No Results Found",
+    //   });
+
+    
+    
+   $("#search-site").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $(".main *").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+
 
 (function($) {
 
@@ -44,8 +96,11 @@ $(() => {
         "type": "search",
         "placeholder": 'What interests you?'
       });
-  
-      $(header).append(input).appendTo(header);
+      var icon =  $("<i>").attr({
+        "class": "icon icon-search"
+      });
+
+      $(header).append(input).append(icon).appendTo(header);
   
       $(input)
         .change(function() {

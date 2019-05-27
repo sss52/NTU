@@ -1,5 +1,6 @@
 
 include ../../atoms/button/button
+include ../../atoms/input-select/input-select
 
 mixin header(spec)
 	- spec = spec || {}
@@ -9,22 +10,82 @@ mixin header(spec)
 
 	header.main-header
 		.top-bar
-			span Information for..
-			span Login
-			span Media
-		.nav-bar
-			.left-align
-				span (65) 6791 1744
-			.logo
-				img(src="/assets/ntu/images/ntu-logo.png", alt="*NTU", height="100px", width="100px")
-			.search
-				input(type='text', placeholder='Search..')
+			.container
+				.top-bar-nav
+					.topbar-wrap
+						.topbar-link
+							ul
+								li
+									+input-select({
+										'__options': ['Information for...', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+										'__display': 'Information for...',
+										'__class': 'topbar-select'
+									})
+								li
+									+input-select({
+										'__options': ['Logins', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+										'__display': 'Logins',
+										'__class': 'topbar-select'
+									})
+								li
+									a(href='/') Media
+					.topbar-wrap
+						.topbar-api
+							ul
+								li
+									+button({
+										'__type': 'anchor',
+										'__class': 'btn--noborder',
+										'__link': '/',
+										'__iconBefore': 'icon-facebook'
+									})
+								li
+									+button({
+										'__type': 'anchor',
+										'__class': 'btn--noborder',
+										'__link': '/',
+										'__iconBefore': 'icon-tweet'
+									})
+								li
+									+button({
+										'__type': 'anchor',
+										'__class': 'btn--noborder',
+										'__link': '/',
+										'__iconBefore': 'icon-youtube'
+									})
+								li
+									+button({
+										'__type': 'anchor',
+										'__class': 'btn--noborder',
+										'__link': '/',
+										'__iconBefore': 'icon-instagram'
+									})
+
+		.nav-bar.top-bar
+			.container
+				.top-bar-nav
+					.topbar-wrap
+						.topbar-link
+							i.icon.icon-phone
+							.contact-main
+								span Contact us
+								span.phone-number (65) 6791 1744
+					.topbar-wrap
+						.topbar-link
+							img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
+					.topbar-wrap
+						.topbar-link
+							input.filterinput#search-site(type='search', placeholder='Search something for..')
+							i.icon.icon-search
 		.nav-menu
 			ul
+				li.sticky-logo
+					a(href="#", class="nav__item")
+						img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
 				li
-					a(href="#", class="nav__item") 
+					a(href="#", class="nav__item")
 						| About NTU
-				li      
+				li
 					a(href="#", class="nav__item")
 						| Global
 				li
@@ -34,8 +95,19 @@ mixin header(spec)
 					a(href="#", class="nav__item")
 						| Academic
 				li
-					a(href="#", class="nav__item") 
+					a(href="#", class="nav__item")
 						| Research
 				li
 					a(href="#", class="nav__item")
 						| Campus Life
+				li.sticky-phone
+					a(href="#", class="nav__item")
+						i.icon.icon-phone
+				li.sticky-search
+					a(href="#", class="nav__item")
+						i.icon.icon-search
+		.search-result(style='opacity: 0.7;;width: 100%;background: black;height: 100%;display:none; z-index: 10;left: 0; position: fixed;')
+			.container
+				.flex-div(style='display: flex;width: 100%;')
+					ul.result-section
+					ul.result-content(style='width: 100%;')
