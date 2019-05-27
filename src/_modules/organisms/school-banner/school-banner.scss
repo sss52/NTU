@@ -192,6 +192,10 @@
 			font-weight: $normal;
 			color: $white;
 			border: 1px solid $white;
+
+			span {
+				vertical-align: initial;
+			}
 		}
 	}
 }
