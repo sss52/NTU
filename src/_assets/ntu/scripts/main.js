@@ -42,6 +42,41 @@ $(() => {
     }
 
 
+
+
+  //  $("#search-site").on("keyup", function() {
+  //     var v = $(this).val();
+  //     $(".results").removeClass("results");
+  //      $(".noresults").removeClass("noresults");
+  //     $(".main").each(function() {
+  //       if (v != "" && $(this).text().search(new RegExp(v, 'gi')) != -1) {
+  //         $(this).addClass("results");
+  //        } else if (v != "" && $(this).text().search(v) != 1) {
+  //        $(this).addClass("noresults");
+  //       }
+  //     });
+  //    });
+
+    //  $('#search-site').fullsearch({
+
+    //     highlight: true,   
+    //  search_data: ".search-result",
+    //    search_title: ".result-section",
+    //     search_content: ".result-content",
+    //    list: "#main",
+    //     nodata: "No Results Found",
+    //   });
+
+    
+    
+   $("#search-site").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $(".main *").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+
+
 (function($) {
 
     jQuery.expr[':'].Contains = function(a, i, m) {
