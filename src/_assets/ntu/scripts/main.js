@@ -69,17 +69,17 @@ $(() => {
 			}
 
 		 // append list data
-			var res = '<div class="test"><ul>';
+			var res = '<ul>';
 for(var key in results) {
 	res += '<li><a href="javascript:void(0)";>'+results[key].title+'</li></a>';
 }
 
-			res += '</ul></div>';
+			res += '</ul>';
 			$searchResult.html(res);
 		});
 
 		function autoComplete(arrVal) {
-			return (arrVal.title.toLowerCase().includes($searchSite.val()));
+			return (arrVal.title.toLowerCase().includes($searchSite.val().toLowerCase()));
 		}
 
 
