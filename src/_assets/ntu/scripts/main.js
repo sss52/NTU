@@ -41,82 +41,49 @@ $(() => {
 		}
 
 
-
-
-	//  $("#search-site").on("keyup", function() {
-	//     var v = $(this).val();
-	//     $(".results").removeClass("results");
-	//      $(".noresults").removeClass("noresults");
-	//     $(".main").each(function() {
-	//       if (v != "" && $(this).text().search(new RegExp(v, 'gi')) != -1) {
-	//         $(this).addClass("results");
-	//        } else if (v != "" && $(this).text().search(v) != 1) {
-	//        $(this).addClass("noresults");
-	//       }
-	//     });
-	//    });
-
-		//  $('#search-site').fullsearch({
-
-		//     highlight: true,
-		//  search_data: ".search-result",
-		//    search_title: ".result-section",
-		//     search_content: ".result-content",
-		//    list: "#main",
-		//     nodata: "No Results Found",
-		//   });
-
+// Search for the text
 		var jsonData;
 		$.getJSON('assets/ntu/jsondata/searchField.json', function(result) {
 			jsonData = result;
 		})
-
+		$('.icon-search').click(function(){
+			$('#search-result').toggle('1000');
+		  })
 		var $searchResult = $("#search-result");
 		var $searchSite = $("#search-site");
 		$searchSite.on('keyup', function() {
+			$("#search-result").css("display", "block");
 			var searchValue = $(this).val();
-
 			if(!searchValue){
 				$searchResult.html('');
 				return
 			}
-
 			// search goes here
-			//var data = autoComplete(jsonData, searchValue);
 			var results = jsonData.filter(autoComplete);
-console.log(results.length);
+
+			console.log(results);
 
 			if (results.length == 0) {
-				$searchResult.html('No results found');
+				$searchResult.html('<p>No results found.</p>');
 				return;
 			}
 
 		 // append list data
-			var res = '<ul>';
+			var res = '<div class="test"><ul>';
 for(var key in results) {
-	console.log(results[key]);
-	res += '<li>'+results[key].title+'</li>';
+	res += '<li><a href="javascript:void(0)";>'+results[key].title+'</li></a>';
 }
 
-			res += '</ul>';
+			res += '</ul></div>';
 			$searchResult.html(res);
 		});
 
 		function autoComplete(arrVal) {
 			return (arrVal.title.toLowerCase().includes($searchSite.val()));
-
-			//return Arr.filter(e => e.toLowerCase().includes(searchValue.toLowerCase()));
 		}
 
 
-	//  $("#search-site").on("keyup", function() {
-	//     var value = $(this).val().toLowerCase();
-	//     $(".main *").filter(function() {
-	//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-	//     });
-	//   });
-
-
+		//Search filter for Programmes
 (function($) {
 
 		jQuery.expr[':'].Contains = function(a, i, m) {

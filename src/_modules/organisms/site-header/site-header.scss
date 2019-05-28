@@ -379,3 +379,34 @@ header {
 .headroom--not-top + #main {
 	padding-top: 198px;
 }
+#search-result{
+	opacity: 0.9;
+    width: 100%;
+    background: black;
+    height: 100%;
+    z-index: 10;
+    left: 0;
+	position: fixed;
+	p{
+		padding: 10px;
+    padding-left: 40px;
+    color: #fff;
+    font-size: 1.4em;
+	}
+	ul{
+		list-style: none;
+		li{
+			padding: 10px;
+			color: #fff;
+			cursor: pointer;
+			
+			a{
+				color: #fff;
+				text-decoration: none;
+			}&:hover{
+				font-weight: bold;
+				text-decoration: underline;
+		}
+		}
+	}
+}
