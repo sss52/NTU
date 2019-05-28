@@ -46,9 +46,10 @@ $(() => {
 		$.getJSON('assets/ntu/jsondata/searchField.json', function(result) {
 			jsonData = result;
 		})
-		$('.icon-search').click(function(){
+		$('#search-site').click(function(){
 			$('#search-result').toggle('1000');
 		  })
+		  
 		var $searchResult = $("#search-result");
 		var $searchSite = $("#search-site");
 		$searchSite.on('keyup', function() {
@@ -69,11 +70,19 @@ $(() => {
 			}
 
 		 // append list data
-			var res = '<ul>';
+			var res = '<ul class="search-title"><h4>Quick Links</h4>';
 for(var key in results) {
 	res += '<li><a href="javascript:void(0)";>'+results[key].title+'</li></a>';
 }
 
+			res += '</ul><ul class="search-title"><h4>Suggested Search</h4>';
+			for(var key in results) {
+				res += '<li><a href="javascript:void(0)";>'+results[key].link+'</li></a>';
+			}
+			res += '</ul><ul class="search-img"><h4>Research</h4>';
+			for(var key in results) {
+				res += '<li><a href="javascript:void(0)";><img src='+results[key].image+'></li></a>';
+			}
 			res += '</ul>';
 			$searchResult.html(res);
 		});
