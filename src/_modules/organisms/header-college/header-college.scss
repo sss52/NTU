@@ -6,6 +6,17 @@
 				padding: 0px;
 				width: 100%;
 				z-index: 10;
+				.main-nav__logo{
+					padding: 0;
+					h3{
+						font-size:1em;
+					}
+				}
+				.main-nav__links{
+					ul{
+						margin: 0;
+					}
+				} 
 			}
 		.top-bar {
 			display: flex;

@@ -5,8 +5,16 @@
     padding: 0px;
     width: 100%;
     z-index: 10;
+    .main-nav__logo{
+      padding: 0;
+    }
+    .main-nav__links{
+      ul{
+        margin: 0;
+      }
+    } 
   }
-  border-bottom: 1px solid #f2f2f2  ;
+  border-bottom: 1px solid #000;
   .main-nav {
     .nav-wrapper {
       display: flex;

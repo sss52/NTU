@@ -69,7 +69,7 @@ const navbarLinks = document.querySelector(".nav__items");
 		$searchSite.on('keyup', function() {
 			$("#search-result").css("display", "block");
 			var searchValue = $(this).val();
-			if (searchValue.length <= 3) {
+			if (searchValue.length <= 2) {
 				return;
 			}
 

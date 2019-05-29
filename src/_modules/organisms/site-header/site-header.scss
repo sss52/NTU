@@ -289,8 +289,7 @@ header {
 				border: 1px solid #ADADAD;
 				padding: 10px;
 				border-radius: 36px;
-
-			
+				outline: 0 none;
 			}
 			.icon-search{
 				position: absolute;
@@ -395,6 +394,9 @@ header {
 		top: 213px;
 		position: absolute;
 		border:none;
+		@include mobile {
+			top: 80px;
+		}
 		.container{
 			background: #fff;
 		}
@@ -479,7 +481,8 @@ h4{
 	height: 100%;
 	display: flex;
 	align-items: center;
-  }
+	}
+
   .nav__search-label {
 	position: absolute;
 	top: 0;
