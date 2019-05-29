@@ -1,98 +1,51 @@
 [
     {
         "title": "Business Courses",
-        "date": "January 2018",
-        "link": "Business Market",
+        "altText": "Do or Die in a Time of Digital Disruption",
+        "link": "Nanyang Business School",
         "image": "/assets/ntu/images/event-5.png"
     },
     {
-        "title": "Business Market",
-        "date": "March 2018",
-        "link": "Business test",
+        "title": "Business Scholarship",
+        "altText": "E-payment in china & Singapore",
+        "link": "Joint/Dual Master Prgrammes(Business)",
         "image": "/assets/ntu/images/event-2.png"
     },
     {
-        "title": "Market Research",
-        "date": "April 2018",
-        "link": "Market Research",
+        "title": "Bachelor of Business",
+        "altText": "Vistaar lends itself to small Businesses",
+        "link": "Accountancy & Business (Double Degree)",
         "image": "/assets/ntu/images/event-3.png"
     },
     {
-        "title": "NTU & Singtel set up $42.4 million corporate lab to support digital transformation",
-        "date": "February 2018",
-        "link": "javascript:void(0);",
+        "title": "Top Business Schools",
+        "altText": "Logistics Industry in Singapore & Hong Kong",
+        "link": "Business & Computing (Double Degree)",
         "image": "/assets/ntu/images/event-4.png"
     },
     {
-        "title": "NTU joins hands with National Healthcare Group and Dover Park Hospice",
-        "date": "May 2018",
-        "link": "javascript:void(0);",
+        "title": "Marketing Courses",
+        "altText": "Do or Die in a Time of Digital Disruption",
+        "link": "Nanyang Marketing School",
         "image": "/assets/ntu/images/event-5.png"
     },
     {
-        "title": "Alibaba Group and NTU unveil multimillion-dollar research institute on AI",
-        "date": "April 2018",
-        "link": "javascript:void(0);",
+        "title": "Scholarship for Marketing",
+        "altText": "E-payment in china & Singapore",
+        "link": "Joint/Dual Master Prgrammes(Marketing)",
+        "image": "/assets/ntu/images/event-2.png"
+    },
+    {
+        "title": "Bachelor of Marketing",
+        "altText": "Vistaar lends itself to small Businesses",
+        "link": "Accountancy & Marketing (Double Degree)",
         "image": "/assets/ntu/images/event-3.png"
     },
     {
-        "icon": "icon-instagram",
-        "title": "Scientists and engineers from NEWRI aim to gain a better understanding of microbes capable of...",
-        "username": "NTU Singapore",
-        "link": "javascript:void(0);",
-        "avatar": "/assets/ntu/images/social-logo.png",
-        "image":"/assets/ntu/images/social-1.png"
-    },
-    {
-        "icon": "icon-facebook",
-        "title": "",
-        "username": "@ntu_sg",
-        "link": "javascript:void(0);",
-        "avatar": "/assets/ntu/images/social-logo.png",
-        "image":"/assets/ntu/images/social-1.png"
-    },
-    {
-        "icon": "icon-tweet",
-        "title": "",
-        "username": "NTU Singapore",
-        "link": "javascript:void(0);",
-        "avatar": "/assets/ntu/images/social-logo.png",
-        "image":"/assets/ntu/images/social-2.png"
-    },
-    {
-        "icon": "icon-instagram",
-        "title": "",
-        "username": "@ntu_sg",
-        "link": "javascript:void(0);",
-        "avatar": "/assets/ntu/images/social-logo.png",
-        "image":"/assets/ntu/images/social-3.png"
-    },
-    {
-        "title": "NTU ranks 12th in the world, cementing position among top universities in QS rankings",
-        "link": "javascript:void(0);",
-        "category": "News",
-        "image": "/assets/ntu/images/home-slide-1.png"
-    },
-    {
-        "title": "NTU and NUS launch Singapore’s first PhD exchange programme",
-        "link": "javascript:void(0);",
-        "category": "Education",
-        "image": "/assets/ntu/images/home-slide-2.jpg"
-    },
-    {
-        "title": "New handheld device for quick monitoring of heavy metals in drinking water",
-        "link": "javascript:void(0);",
-        "category": "Research",
-        "image": "/assets/ntu/images/home-slide-3.jpg"
-    },
-    {
-        "title": "Singapore President and NTU new  Chancellor ​Halimah Yacob made her first visit to the campus",
-        "link": "See research",
-        "image": "/assets/ntu/images/home-slide-3.jpg"
-    },
-    {
-        "title": "Agilent Technologies and Nanyang Technological University collaborate on wastewater treatment research.",
-        "link": "See research",
-        "image": "/assets/ntu/images/home-slide-3.jpg"
+        "title": "Top Marketing Schools",
+        "altText": "Logistics Industry in Singapore & Hong Kong",
+        "link": "Marketing & Computing (Double Degree)",
+        "image": "/assets/ntu/images/event-4.png"
     }
+    
 ]

@@ -61,33 +61,43 @@ mixin header(spec)
 											'__iconBefore': 'icon-instagram'
 										})
 		.middle-bar
-			.logo
-				img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
-			label.nav__btn-label(for='nav__btn')
-				span.nav__bar
-			input#nav__btn.nav__btn(type='checkbox')
-			label.nav__search-label
-				i.icon.icon-search
-			mav.nav
-				ul.nav__items
-					li.nav__links
-						a.nav__link(href='#') 
-							| About NTU
-					li.nav__links
-						a.nav__link(href='#') 
-							| Global
-					li.nav__links
-						a.nav__link(href='#') 
-							| Admissions
-					li.nav__links
-						a.nav__link(href='#')
-							| Academic
-					li.nav__links
-						a.nav__link(href='#') 
-							| Research
-					li.nav__links
-						a.nav__link(href='#') 
-							| Campus Life
+			.container
+				.logo
+					img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
+				label.nav__btn-label(for='nav__btn')
+					span.nav__bar
+				input#nav__btn.nav__btn(type='checkbox')
+				label.nav__search-label
+					i.icon.icon-search
+				mav.nav
+					ul.nav__items
+						li.nav__links.sticky-icon(style="position: absolute;left: 30px;top: 10px;")
+							a.nav__link(href='#') 
+								img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
+						li.nav__links
+							a.nav__link(href='#') 
+								| About NTU
+						li.nav__links
+							a.nav__link(href='#') 
+								| Global
+						li.nav__links
+							a.nav__link(href='#') 
+								| Admissions
+						li.nav__links
+							a.nav__link(href='#')
+								| Academic
+						li.nav__links
+							a.nav__link(href='#') 
+								| Research
+						li.nav__links
+							a.nav__link(href='#') 
+								| Campus Life
+						li.nav__links.sticky-icon
+							a.nav__link(href='#') 
+								i.icon.icon-phone
+						li.nav__links.sticky-icon
+							a.nav__link(href='#') 
+								i.icon.icon-search
 		.nav-bar.top-bar
 			.container
 				.top-bar-nav

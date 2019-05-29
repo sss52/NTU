@@ -81,7 +81,7 @@ const navbarLinks = document.querySelector(".nav__items");
 			}
 
 		 // append list data
-			var res = '<ul class="search-title"><h4>Quick Links</h4>';
+			var res = '<div class="container"><ul class="search-title quick-links"><h4>Quick Links</h4>';
 for(var key in results) {
 	res += '<li><a href="javascript:void(0)";>' + highlight(results[key].title, searchValue) + '</li></a>';
 }
@@ -92,9 +92,9 @@ for(var key in results) {
 			}
 			res += '</ul><ul class="search-img"><h4>Research</h4>';
 			for(var key in results) {
-				res += '<li><a href="javascript:void(0)";><img src='+highlight(results[key].image, searchValue)+'></li></a>';
+				res += '<li><a href="javascript:void(0)";><img src='+highlight(results[key].image, searchValue)+'><span>'+results[key].altText+'</span></li></a>';
 			}
-			res += '</ul>';
+			res += '</ul></div>';
 			$searchResult.html(res);
 		});
 
