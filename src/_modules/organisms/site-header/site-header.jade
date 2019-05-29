@@ -8,7 +8,106 @@ mixin header(spec)
 	- spec.primaryNav = spec.primaryNav || -1
 	- spec.secondaryNav = spec.secondaryNav || -1
 
-	header.main-header
+	header.header__main
+		.top-bar
+				.container
+					.top-bar-nav
+						.topbar-wrap
+							.topbar-link
+								ul
+									li
+										+input-select({
+											'__options': ['Information for...', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+											'__display': 'Information for...',
+											'__class': 'topbar-select'
+										})
+									li
+										+input-select({
+											'__options': ['Logins', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+											'__display': 'Logins',
+											'__class': 'topbar-select'
+										})
+									li
+										a(href='/') Media
+						.topbar-wrap
+							.topbar-api
+								ul
+									li
+										+button({
+											'__type': 'anchor',
+											'__class': 'btn--noborder',
+											'__link': '/',
+											'__iconBefore': 'icon-facebook'
+										})
+									li
+										+button({
+											'__type': 'anchor',
+											'__class': 'btn--noborder',
+											'__link': '/',
+											'__iconBefore': 'icon-tweet'
+										})
+									li
+										+button({
+											'__type': 'anchor',
+											'__class': 'btn--noborder',
+											'__link': '/',
+											'__iconBefore': 'icon-youtube'
+										})
+									li
+										+button({
+											'__type': 'anchor',
+											'__class': 'btn--noborder',
+											'__link': '/',
+											'__iconBefore': 'icon-instagram'
+										})
+		.middle-bar
+			.logo
+				img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
+			label.nav__btn-label(for='nav__btn')
+				span.nav__bar
+			input#nav__btn.nav__btn(type='checkbox')
+			label.nav__search-label
+				i.icon.icon-search
+			mav.nav
+				ul.nav__items
+					li.nav__links
+						a.nav__link(href='#') 
+							| About NTU
+					li.nav__links
+						a.nav__link(href='#') 
+							| Global
+					li.nav__links
+						a.nav__link(href='#') 
+							| Admissions
+					li.nav__links
+						a.nav__link(href='#')
+							| Academic
+					li.nav__links
+						a.nav__link(href='#') 
+							| Research
+					li.nav__links
+						a.nav__link(href='#') 
+							| Campus Life
+		.nav-bar.top-bar
+			.container
+				.top-bar-nav
+					.topbar-wrap
+						.topbar-link
+							i.icon.icon-phone
+							.contact-main
+								span Contact us
+								span.phone-number (65) 6791 1744
+					.topbar-wrap
+						.topbar-link
+							img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
+					.topbar-wrap
+						.topbar-link
+							input.filterinput#search-site(type='search', placeholder='Search something for..')
+							i.icon.icon-search
+		#search-result(style='display:none;')
+
+
+	//- header.main-header
 		.top-bar
 			.container
 				.top-bar-nav
@@ -77,36 +176,36 @@ mixin header(spec)
 						.topbar-link
 							input.filterinput#search-site(type='search', placeholder='Search something for..')
 							i.icon.icon-search
-		.nav-menu
-			ul
-				li.sticky-logo
-					a(href="#", class="nav__item")
-						img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
-				li
-					a(href="#", class="nav__item")
-						| About NTU
-				li
-					a(href="#", class="nav__item")
-						| Global
-				li
-					a(href="#", class="nav__item")
-						| Admissions
-				li
-					a(href="#", class="nav__item")
-						| Academic
-				li
-					a(href="#", class="nav__item")
-						| Research
-				li
-					a(href="#", class="nav__item")
-						| Campus Life
-				li.sticky-phone
-					a(href="#", class="nav__item")
-						i.icon.icon-phone
-				li.sticky-search
-					a(href="#", class="nav__item")
-						i.icon.icon-search
-		#search-result(style='display:none;')
+	//- 	.nav-menu
+	//- 		ul
+	//- 			li.sticky-logo
+	//- 				a(href="#", class="nav__item")
+	//- 					img.main-logo(src='/assets/ntu/images/ntu-logo.png', alt='NTU logo')
+	//- 			li
+	//- 				a(href="#", class="nav__item")
+	//- 					| About NTU
+	//- 			li
+	//- 				a(href="#", class="nav__item")
+	//- 					| Global
+	//- 			li
+	//- 				a(href="#", class="nav__item")
+	//- 					| Admissions
+	//- 			li
+	//- 				a(href="#", class="nav__item")
+	//- 					| Academic
+	//- 			li
+	//- 				a(href="#", class="nav__item")
+	//- 					| Research
+	//- 			li
+	//- 				a(href="#", class="nav__item")
+	//- 					| Campus Life
+	//- 			li.sticky-phone
+	//- 				a(href="#", class="nav__item")
+	//- 					i.icon.icon-phone
+	//- 			li.sticky-search
+	//- 				a(href="#", class="nav__item")
+	//- 					i.icon.icon-search
+	//- 	#search-result(style='display:none;')
 		//- div.header.nav-menu
 		//- 	a.search-mob(href='')
 		//- 		i.icon.icon-search

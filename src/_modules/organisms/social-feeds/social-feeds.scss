@@ -22,9 +22,22 @@
   }
  .wrapper{
    display:flex;
-   .first-half{width:40%;}
-   .second-half{    width: 60%;}
+   
+   @include mobile {
+    display:block;
+}
+
+   .first-half{width:40%;
+    @include mobile {
+      width:100%;
+  }
+  }
+   .second-half{    width: 60%;
+    @include mobile {
+      width:100%;
+  }}
  }
+
   .card-view {
     background:#153c79;
     -webkit-box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);

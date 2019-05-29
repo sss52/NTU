@@ -40,12 +40,26 @@ $(() => {
 			$('.facybox').fancybox();
 		}
 
-
+const navbarLinks = document.querySelector(".nav__items");
+			const navBtn = document.querySelector(".nav__btn");
+			
+			navbarLinks.addEventListener("click", e => {
+			
+			if (!event.target.classList.contains('nav__link')) return;
+			
+			navBtn.checked = false;
+			
+			});
+			
 // Search for the text
 		var jsonData;
-		$.getJSON('assets/ntu/jsondata/searchField.json', function(result) {
-			jsonData = result;
-		})
+		$.ajax({
+			url: "assets/ntu/jsondata/searchField.json", 
+			success: function(result) {
+				jsonData = result;
+		  	}
+		});
+
 		$('#search-site').click(function(){
 			$('#search-result').toggle('1000');
 		  })
@@ -55,14 +69,11 @@ $(() => {
 		$searchSite.on('keyup', function() {
 			$("#search-result").css("display", "block");
 			var searchValue = $(this).val();
-			if(!searchValue){
-				$searchResult.html('');
-				return
+			if (searchValue.length <= 3) {
+				return;
 			}
-			// search goes here
-			var results = jsonData.filter(autoComplete);
 
-			console.log(results);
+			var results = jsonData.filter(autoComplete);
 
 			if (results.length == 0) {
 				$searchResult.html('<p>No results found.</p>');
@@ -72,23 +83,35 @@ $(() => {
 		 // append list data
 			var res = '<ul class="search-title"><h4>Quick Links</h4>';
 for(var key in results) {
-	res += '<li><a href="javascript:void(0)";>'+results[key].title+'</li></a>';
+	res += '<li><a href="javascript:void(0)";>' + highlight(results[key].title, searchValue) + '</li></a>';
 }
 
 			res += '</ul><ul class="search-title"><h4>Suggested Search</h4>';
 			for(var key in results) {
-				res += '<li><a href="javascript:void(0)";>'+results[key].link+'</li></a>';
+				res += '<li><a href="javascript:void(0)";>'+highlight(results[key].link, searchValue)+'</li></a>';
 			}
 			res += '</ul><ul class="search-img"><h4>Research</h4>';
 			for(var key in results) {
-				res += '<li><a href="javascript:void(0)";><img src='+results[key].image+'></li></a>';
+				res += '<li><a href="javascript:void(0)";><img src='+highlight(results[key].image, searchValue)+'></li></a>';
 			}
 			res += '</ul>';
 			$searchResult.html(res);
 		});
 
-		function autoComplete(arrVal) {
+		function autoComplete(arrVal) 
+		{
 			return (arrVal.title.toLowerCase().includes($searchSite.val().toLowerCase()));
+		}
+
+		function highlight(title, searchVal)
+		{
+			searchVal = searchVal.replace(/(\s+)/,"(<[^>]+>)$1(<[^>]+>)");
+			var pattern = new RegExp("("+searchVal+")", "gi");
+
+			title = title.replace(pattern, "<strong>$1</strong>");
+			title = title.replace(/(<strong>[^<>])((<[^>]+>)+)([^<>]<\/strong>)/,"$1</strong>$2<strong>$4");
+
+			return title;
 		}
 
 
