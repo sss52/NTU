@@ -5,21 +5,21 @@ mixin cta-section(spec)
 	section.cta-section(class=spec.__class)&attributes(attributes)
 		.container
 			.row
-				.col-md-4
+				.col-md-4.col-sm-12
 					+button({
 						'__type': 'anchor',
 						'__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
 						'__link': '/',
 						'__text':'BFA at ADM'
 					})
-				.col-md-4
+				.col-md-4.col-sm-12
 					+button({
 						'__type': 'anchor',
 						'__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
 						'__link': '/',
 						'__text':'Masters and PhD at ADM'
 					})
-				.col-md-4
+				.col-md-4.col-sm-12
 					+button({
 						'__type': 'anchor',
 						'__class': 'btn--with-triangle btn--lightgrey btn--fullwidth btn--programme',
@@ -35,7 +35,7 @@ mixin cta-section-opt(spec)
 		.container
 			.row
 				each button, index in spec.buttons
-					.col-md-4
+					.col-md-4.col-sm-12
 						+button({
 							'__type': 'anchor',
 							'__class': button.btnclass,

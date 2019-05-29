@@ -522,7 +522,7 @@ h4{
 	top: 7px;
   }
   
-  .nav {
+  .nav-middle-menu {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -559,11 +559,11 @@ h4{
 	color: #000;
   }
   
-  .nav__btn:checked ~ .nav {
+  .nav__btn:checked ~ .nav-middle-menu  {
 	transform: scale(1,1);
   }
   
-  .nav__btn:checked ~ .nav .nav__link {
+  .nav__btn:checked ~ .nav-middle-menu  .nav__link {
 	opacity: 1;
 	transition: opacity 250ms ease-in-out 250ms;
   }
@@ -606,7 +606,7 @@ h4{
 		padding-left: 2rem;  
 	  }
 	  
-	  .nav {
+	  .nav-middle-menu  {
 		all: unset;
 		display: flex;
 		align-items: center;
@@ -669,7 +669,7 @@ h4{
 		.logo{
 			display:none;
 		}
-	.nav{
+	.nav-middle-menu {
 		.nav__items{
 			padding-top: 1.2rem;
 			.nav__link{
