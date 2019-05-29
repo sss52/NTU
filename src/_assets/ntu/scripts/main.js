@@ -54,7 +54,7 @@ const navbarLinks = document.querySelector(".nav__items");
 // Search for the text
 		var jsonData;
 		$.ajax({
-			url: "assets/ntu/jsondata/searchField.json", 
+			url: "assets/ntu/jsonData/searchField.json", 
 			success: function(result) {
 				jsonData = result;
 		  	}

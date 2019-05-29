@@ -384,7 +384,7 @@ header {
 // }
 #search-result{
 	width: 100%;
-    background: red;
+    background: #d71440;
     z-index: 10;
     left: 0;
     right: 0;
@@ -492,7 +492,7 @@ h4{
 	left: 0;
 		margin-left: 1rem;
 		.icon-search{
-			color:red;
+			color:#DA1D43;
 		}
   }
   
@@ -501,7 +501,7 @@ h4{
   .nav__bar::before,
   .nav__bar::after {
 	display: block;
-	background: red;
+	background: #DA1D43;
 	height: 2px;
 	width: 2em;
 	border-radius: 2px;
