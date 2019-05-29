@@ -309,7 +309,7 @@ header {
 		}
 	.icon-phone{
 			font-size: 24px;
-			background: red;
+			background: #d71440;
     padding: 10px;
     border-radius: 50%;
 		color: #fff;
@@ -384,7 +384,7 @@ header {
 // }
 #search-result{
 	width: 100%;
-    background: #d71440;
+    background: #999;
     z-index: 10;
     left: 0;
     right: 0;
@@ -542,7 +542,6 @@ h4{
   
   .nav__links {
 	margin-bottom: 1rem;
-	margin-left: 1rem;
 	list-style: none;
 	padding: 0 15px;
   }
@@ -550,7 +549,7 @@ h4{
   .nav__link {
 	color: #000;
 	text-decoration: none;
-	font-size: 1rem;
+	font-size: 0.8rem;
 	opacity: 0;
 	transition: opacity 150ms ease-in-out;
   }
