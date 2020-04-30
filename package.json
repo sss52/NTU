@@ -7,7 +7,7 @@
     "enquire.js": "^2.1.6",
     "gsap": "^1.19.1",
     "headroom.js": "^0.9.4",
-    "jquery": "~3.1.1",
+    "jquery": "~3.5.0",
     "jquery-asPieProgress": "^0.4.7",
     "jquery-hoverintent": "^1.10.0",
     "jquery-match-height": "^0.7.2",
