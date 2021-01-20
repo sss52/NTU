@@ -5,7 +5,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "dot": "^1.1.2",
     "enquire.js": "^2.1.6",
-    "gsap": "^1.19.1",
+    "gsap": "^3.6.0",
     "headroom.js": "^0.9.4",
     "jquery": "~3.1.1",
     "jquery-asPieProgress": "^0.4.7",
